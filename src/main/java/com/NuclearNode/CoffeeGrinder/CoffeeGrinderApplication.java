@@ -11,10 +11,8 @@ public class CoffeeGrinderApplication {
 		SpringApplication.run(CoffeeGrinderApplication.class, args);
 	}
 	
-<<<<<<< HEAD
 	
-=======
 	//hello pls
->>>>>>> 3b5f07f778958e8aaf54b20be9ccc95e839eb2c0
+	//further testing main
 
 }
