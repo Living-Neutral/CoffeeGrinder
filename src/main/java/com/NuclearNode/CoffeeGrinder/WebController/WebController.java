@@ -1,17 +1,20 @@
 package com.NuclearNode.CoffeeGrinder.WebController;
-package com.mkyong
+
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.math.BigInteger;
+import java.math.RoundingMode;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.google.common.math.*;
 @RestController
 public class WebController {
 	
@@ -21,17 +24,27 @@ public class WebController {
 		return "CoffeeGrinder Test";
 	}
 	
-}
+	@RequestMapping(value="/CoffeeGrinder/guavatest",method=RequestMethod.GET)
+	String guavaCheck()
+	{
+		
+		return String.valueOf(BigIntegerMath.log10(new BigInteger("1000"),  
+                RoundingMode.HALF_EVEN));
+	}
 	
+	
+	
+}
+
 public class JSoupExample{
 	
 	public static void main(String[] args) {
 		Document doc;
 		try {
+		    
+			doc = Jsoup.connect("http://google.com").get();
 			
-			doc = JSoup.connect("http://google.com").get();
-			
-			String title = doc.title;
+			String title = doc.title();
 			System.out.println("Title: " + title);
 			
 			Elements links = doc.select("a[href]");
@@ -46,5 +59,4 @@ public class JSoupExample{
 	}
 
 }
-
 
