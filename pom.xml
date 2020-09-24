@@ -36,8 +36,7 @@
 			</exclusions>
 		</dependency>
 		
-<<<<<<< HEAD
-=======
+
 			<dependency>
 		<!-- jsoup HTML parser library @https://jsoup.org/ -->
 		<groupId>org.jsoup</groupId>
@@ -51,8 +50,14 @@
 			<artifactId>commons-math3</artifactId>
 			<version>3.6.1</version>
 		</dependency>
+		
+		<dependency>
+  			<groupId>com.google.guava</groupId>
+  			<artifactId>guava</artifactId>
+  			<version>29.0-jre</version>
+		</dependency>
 
->>>>>>> 2d43500bf4a950ee81bd8c7be51924756fe0cd41
+
 	</dependencies>
 
 	<build>
