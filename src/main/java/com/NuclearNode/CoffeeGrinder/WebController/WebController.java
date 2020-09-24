@@ -35,8 +35,8 @@ public class WebController {
 	
 	
 }
-
-public class JSoupExample{
+/*
+ class JSoupExample{
 	
 	public static void main(String[] args) {
 		Document doc;
@@ -60,3 +60,4 @@ public class JSoupExample{
 
 }
 
+*/
