@@ -56,6 +56,14 @@
   			<artifactId>guava</artifactId>
   			<version>29.0-jre</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+    		<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+    		<version>8.0.20</version>
+		</dependency>
+
 
 
 	</dependencies>
