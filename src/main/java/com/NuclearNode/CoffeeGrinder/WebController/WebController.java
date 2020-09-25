@@ -31,6 +31,12 @@ public class WebController {
 		return String.valueOf(BigIntegerMath.log10(new BigInteger("1000"),  
                 RoundingMode.HALF_EVEN));
 	}
+
+	@RequestMapping(value="/CoffeeGrinder/worm",method=RequestMethod.GET)
+	String wormReturn()
+	{
+		return "The worm. It wiggles.";
+	}
 	
 	
 	
