@@ -2,25 +2,24 @@ package com.NuclearNode.CoffeeGrinder;
 
 public class StarbucksDrink 
 {
-	String name;
-	String description;
-	String type;
-	String category;
-	float sugar_content;
-	float serving_size;
-	float relative_sugar;
-	boolean dairy;
-	boolean soy;
-	boolean tree_nuts;
-	boolean espresso;
-	boolean wheat;
-	boolean sweetness;
-	boolean fruity;
+	private String name;
+	private String description;
+	private String type;
+	private String category;
+	private float sugar_content;
+	private float serving_size;
+	private float relative_sugar;
+	private boolean dairy;
+	private boolean soy;
+	private boolean tree_nuts;
+	private boolean espresso;
+	private boolean wheat;
+	private boolean sweetness;
+	private boolean fruity;
 	
 	StarbucksDrink()
 	{
-		
-		
+	
 	}
 
 }
