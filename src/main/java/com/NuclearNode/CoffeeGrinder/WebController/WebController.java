@@ -65,6 +65,27 @@ public class WebController {
 		return "Connection is Successful";
 	}
 	
+	@RequestMapping(value = "/CoffeeGrinder/BensTest", method = RequestMethod.GET)
+	String mySqlCheckNew()
+	{
+		String url =  "jdbc:mysql://localhost:3306/starbucks_drinks";
+		String user = "root";
+		String password = "NyanCat7!";
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection = DriverManager.getConnection(url,user,password);
+		}
+		catch(ClassNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch(SQLException throwables)
+		{
+			throwables.printStackTrace();
+		}
+		return "Connection is Successful";
+	}
 	
 	
 }
