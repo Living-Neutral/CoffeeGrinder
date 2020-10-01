@@ -10,7 +10,4 @@ public class CoffeeGrinderApplication {
 	{
 		SpringApplication.run(CoffeeGrinderApplication.class, args);
 	}
-	
-	
-
 }
