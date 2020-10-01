@@ -11,8 +11,6 @@ public class CoffeeGrinderApplication {
 		SpringApplication.run(CoffeeGrinderApplication.class, args);
 	}
 	
-	//test
-	//hello pls
-	//further testing main
+	
 
 }
