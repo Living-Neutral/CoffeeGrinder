@@ -19,14 +19,14 @@ public class StarbucksController
 		
 	}
 	
-	@RequestMapping(method=RequestMethod.POST, value = "/topics")
+	@RequestMapping(method=RequestMethod.POST, value = "/CoffeeGrinder")
 	public void addStarbucksDrink(@RequestBody StarbucksDrink sb_drink) 
 	{
 		
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")
-	public void updateTopic(@RequestBody StarbucksDrink sb_drink, @PathVariable String id)
+	@RequestMapping(method=RequestMethod.PUT, value="/CoffeeGrinder/{id}")
+	public void updateStarbucksDrink(@RequestBody StarbucksDrink sb_drink, @PathVariable String id)
 	{
 		
 	}
