@@ -1,7 +1,12 @@
 package com.NuclearNode.CoffeeGrinder;
 
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@EntityScan
 public class StarbucksDrink 
 {
+
 	private String name;
 	private String description;
 	private String type;
