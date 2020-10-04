@@ -43,6 +43,13 @@
 		<artifactId>jsoup</artifactId>
 		<version>1.13.1</version>
 		</dependency>
+		
+		<!-- Excel Reading Library -->
+		<dependency>
+        	<groupId>org.apache.poi</groupId>
+        	<artifactId>poi</artifactId>
+        	<version>3.11-beta2</version>
+    		</dependency>
 
 		<!-- Commons Math library @https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
 		<dependency>
