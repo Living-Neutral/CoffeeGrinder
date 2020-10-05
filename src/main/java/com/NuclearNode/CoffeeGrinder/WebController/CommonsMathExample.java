@@ -1,5 +1,5 @@
 package com.NuclearNode.CoffeeGrinder.WebController;
-import org.apache.commons.math3.stat;
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class CommonsMathExample {
     public static void main(String[] args) {
