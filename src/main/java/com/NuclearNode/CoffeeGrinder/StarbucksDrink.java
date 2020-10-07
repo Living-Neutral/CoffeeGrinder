@@ -6,7 +6,9 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EntityScan
 public class StarbucksDrink 
 {
-
+	
+    @Id
+    @GenerateValue
 	private String name;
 	private String description;
 	private String type;
