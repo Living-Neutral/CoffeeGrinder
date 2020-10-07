@@ -1,13 +1,18 @@
 package com.NuclearNode.CoffeeGrinder.WebController;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WebController {
 	
 	
-<<<<<<< HEAD
-=======
+
 	@RequestMapping(value = "/CoffeeGrinder/mysqlTest", method = RequestMethod.GET)
 	String mySqlCheck()
 	{
@@ -51,32 +56,7 @@ public class WebController {
 		}
 		return "Connection is Successful";
 	}
-	
-	
+		
 }
-/*
- class JSoupExample{
-	
-	public static void main(String[] args) {
-		Document doc;
-		try {
-		    
-			doc = Jsoup.connect("http://google.com").get();
-			
-			String title = doc.title();
-			System.out.println("Title: " + title);
-			
-			Elements links = doc.select("a[href]");
-			for(Element link: links) {
-				System.out.println("\nlink: " + link.attr("href"));
-				System.out.println("text: " + link.text());
-			}
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
 
->>>>>>> e5d0fa81983465371305c9a0eed9bec7a7854256
-}
 
