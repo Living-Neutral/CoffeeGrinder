@@ -1,9 +1,10 @@
-package com.NuclearNode.CoffeeGrinder.assignments;
+/*package com.NuclearNode.CoffeeGrinder.assignments;
 
 import com.NuclearNode.CoffeeGrinder.WebController.Document;
 import com.NuclearNode.CoffeeGrinder.WebController.Element;
 import com.NuclearNode.CoffeeGrinder.WebController.Elements;
 import com.NuclearNode.CoffeeGrinder.WebController.IOException;
+import org.jsoup.Jsoup;
 
 public class JSoupExample{
 	
@@ -29,3 +30,4 @@ public class JSoupExample{
 
 }
 
+*/
