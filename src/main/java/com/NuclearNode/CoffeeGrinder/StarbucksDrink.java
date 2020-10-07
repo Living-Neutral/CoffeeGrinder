@@ -1,14 +1,16 @@
 package com.NuclearNode.CoffeeGrinder;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-@EntityScan
+@Entity
 public class StarbucksDrink 
 {
 	
     @Id
-    @GenerateValue
 	private String name;
 	private String description;
 	private String type;
@@ -27,6 +29,25 @@ public class StarbucksDrink
 	StarbucksDrink()
 	{
 	
+	}
+	
+	StarbucksDrink(String n,String desc, String t, String cat, float sug_con, float serv_s, 
+			float rel_sug, boolean dry,boolean sy, boolean t_nuts, boolean esp, boolean wht, boolean swtnss, boolean frty)
+	{
+		name = n;
+		description = desc;
+		type = t;
+		category = cat;
+		sugar_content= sug_con;
+		serving_size=serv_s;
+		relative_sugar= rel_sug;
+		dairy = dry ;
+		soy = sy;
+		tree_nuts = t_nuts;
+		espresso = esp;
+		wheat = wht;
+		sweetness = swtnss;
+		fruity = frty;
 	}
 
 	public String getName() {
