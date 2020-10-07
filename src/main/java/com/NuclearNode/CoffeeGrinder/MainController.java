@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
 
     @Autowired
-    private Repository drinkRepository;
+    private StarBucksDrinkRepo drinkRepository;
 
     @PostMapping(path="/add")
     public @ResponseBody String addNewOrder(@RequestParam String name, @RequestParam String description,
@@ -42,14 +42,14 @@ public class MainController {
         order.setSweetness(sweetness);
         order.setFruity(fruity);
         order.setSoy(soy);
+        drinkRepository.save(order);
 
         return "Saved.";
     }
 
     @GetMapping(path="/all")
-    public ResponseBody Iterable<StarbucksDrink> getAllDrinks(){
-
-        return drinkRepository;
-
+    public @ResponseBody Iterable<StarbucksDrink> getAllDrinks(){
+        return drinkRepository.findAll();
     }
+
 }
