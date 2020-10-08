@@ -1,6 +1,14 @@
-package com.NuclearNode.CoffeeGrinder.assignments;
+/*package com.NuclearNode.CoffeeGrinder.assignments;
 
+<<<<<<< HEAD
 import java.io.IOException;
+=======
+import com.NuclearNode.CoffeeGrinder.WebController.Document;
+import com.NuclearNode.CoffeeGrinder.WebController.Element;
+import com.NuclearNode.CoffeeGrinder.WebController.Elements;
+import com.NuclearNode.CoffeeGrinder.WebController.IOException;
+import org.jsoup.Jsoup;
+>>>>>>> c218f546f506a79bfc21f14d6a634602bba8c273
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -31,3 +39,4 @@ public class JsoupExample{
 
 }
 
+*/
