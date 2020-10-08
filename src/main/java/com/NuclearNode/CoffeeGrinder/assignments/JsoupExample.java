@@ -1,11 +1,13 @@
 package com.NuclearNode.CoffeeGrinder.assignments;
 
-import com.NuclearNode.CoffeeGrinder.WebController.Document;
-import com.NuclearNode.CoffeeGrinder.WebController.Element;
-import com.NuclearNode.CoffeeGrinder.WebController.Elements;
-import com.NuclearNode.CoffeeGrinder.WebController.IOException;
+import java.io.IOException;
 
-public class JSoupExample{
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+public class JsoupExample{
 	
 	public static void main(String[] args) {
 		Document doc;
