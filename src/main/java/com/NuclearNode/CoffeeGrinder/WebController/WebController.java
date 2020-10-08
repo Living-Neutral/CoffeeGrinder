@@ -34,7 +34,7 @@ public class WebController {
 		}
 		return "Connection is Successful";
 	}
-	
+	/*
 	@RequestMapping(value = "/CoffeeGrinder/BensTest", method = RequestMethod.GET)
 	String mySqlCheckNew()
 	{
@@ -56,6 +56,7 @@ public class WebController {
 		}
 		return "Connection is Successful";
 	}
+	*/
 		
 }
 
