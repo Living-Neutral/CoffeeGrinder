@@ -12,6 +12,7 @@ public class CoffeeGrinderApplication {
 
 		DatabaseConnection ex = new DatabaseConnection();
 		ex.connect();
+		ex.Disconnect();
 
 	}
 
