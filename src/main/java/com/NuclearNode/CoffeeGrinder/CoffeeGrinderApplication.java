@@ -9,5 +9,11 @@ public class CoffeeGrinderApplication {
 	public static void main(String[] args) 
 	{
 		SpringApplication.run(CoffeeGrinderApplication.class, args);
+
+		DatabaseConnection ex = new DatabaseConnection();
+		ex.connect();
+		ex.Disconnect();
+
 	}
+
 }
