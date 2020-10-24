@@ -19,8 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping
 public class MainController {
 
-    @Autowired
-    private StarBucksDrinkRepo drinkRepository;
     
     @Autowired
     private StarbucksDrinkService starbucks_drink_service;
