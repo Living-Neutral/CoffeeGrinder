@@ -25,12 +25,7 @@ public class MainController {
     @Autowired
     private StarbucksDrinkService starbucks_drink_service;
 
-
-
-    @GetMapping(path="/all")
-    public @ResponseBody Iterable<StarbucksDrink> getAllDrinks(){
-        return drinkRepository.findAll();
-    }
+   
     
     
     @RequestMapping("/CoffeeGrinder/StarbucksDrinks")
