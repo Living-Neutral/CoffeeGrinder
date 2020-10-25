@@ -10,9 +10,7 @@ public class CoffeeGrinderApplication {
 	{
 		SpringApplication.run(CoffeeGrinderApplication.class, args);
 
-		//DatabaseConnection ex = new DatabaseConnection();
-		//ex.connect();
-		//ex.Disconnect();
+		
 
 	}
 
