@@ -20,7 +20,7 @@ public class StarbucksDrinkService
 		
 		Iterable<StarbucksDrink> sb_iter = sb_repo.findAll();
 		List<StarbucksDrink> sb_drinks = new ArrayList <StarbucksDrink>();
-		sb_iter.forEach(sb_drinks::add);
+		
 		return sb_drinks;
 	}
 	
