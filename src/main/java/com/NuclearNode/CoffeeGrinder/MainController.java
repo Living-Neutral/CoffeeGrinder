@@ -22,9 +22,6 @@ public class MainController {
     
     @Autowired
     private StarbucksDrinkService starbucks_drink_service;
-
-   
-    
     
     @RequestMapping("/CoffeeGrinder/StarbucksDrinks")
     public List<StarbucksDrink> getAllStarBucksDrinks()
@@ -38,7 +35,7 @@ public class MainController {
     	starbucks_drink_service.updateStarBucksDrink(id, sbD);
     }
     
-    @RequestMapping(method=RequestMethod.DELETE, value="/topics/{id}")
+    @RequestMapping(method=RequestMethod.DELETE, value="/CoffeGrinder/Delete/{id}")
     public void deleteDrink(@PathVariable String id) 
     {
     	starbucks_drink_service.deleteStarbucksDrink(id);
