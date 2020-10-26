@@ -1,5 +1,6 @@
 package com.NuclearNode.CoffeeGrinder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.tomcat.jni.User;
@@ -14,31 +15,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping
 public class MainController {
 
     
-    @Autowired
-    private StarbucksDrinkService starbucks_drink_service;
+    //@Autowired
+    //private StarbucksDrinkService starbucks_drink_service;
     
+	@RequestMapping(value = "/CoffeeGrinder/home",method=RequestMethod.GET)
+	public String home()
+	{
+		return "Welcome to CoffeeGrinder";
+	}
     @RequestMapping("/CoffeeGrinder/StarbucksDrinks")
-    public List<StarbucksDrink> getAllStarBucksDrinks()
+    public void getAllStarBucksDrinks()
     {
-    	return starbucks_drink_service.getAllStarBucksDrinks();
+    	//return starbucks_drink_service.getAllStarBucksDrinks();
     }
     
-    @RequestMapping(method = RequestMethod.POST, value = "/CoffeeGrinder/StarbucksDrinks")
+    @RequestMapping(method = RequestMethod.POST, value = "/CoffeeGrinder/StarbucksDrinks/add")
     public void addDrink(@PathVariable String id,@RequestBody StarbucksDrink sbD)
     {
-    	starbucks_drink_service.updateStarBucksDrink(id, sbD);
+    	//starbucks_drink_service.updateStarBucksDrink(id, sbD);
     }
     
     @RequestMapping(method=RequestMethod.DELETE, value="/CoffeGrinder/Delete/{id}")
     public void deleteDrink(@PathVariable String id) 
     {
-    	starbucks_drink_service.deleteStarbucksDrink(id);
+    	//starbucks_drink_service.deleteStarbucksDrink(id);
     }
 
 }
