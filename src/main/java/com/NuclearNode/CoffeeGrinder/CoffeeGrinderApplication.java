@@ -9,9 +9,6 @@ public class CoffeeGrinderApplication {
 	public static void main(String[] args) 
 	{
 		SpringApplication.run(CoffeeGrinderApplication.class, args);
-
-		
-
 	}
 
 }

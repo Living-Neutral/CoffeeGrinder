@@ -3,7 +3,6 @@ package com.NuclearNode.CoffeeGrinder;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity

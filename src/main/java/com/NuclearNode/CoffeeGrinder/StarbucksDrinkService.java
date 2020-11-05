@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StarbucksDrinkService 
 {
-	/**
+	
 	
 	@Autowired
 	private StarBucksDrinkRepo sb_repo;
@@ -45,7 +45,7 @@ public class StarbucksDrinkService
 	{
 		sb_repo.deleteById(id);
 	}
-	*/
+	
 	
 
 }
