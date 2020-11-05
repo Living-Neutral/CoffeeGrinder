@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Grinder Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <link href="style.css" rel="stylesheet">
+    <link href="quizstyle.css" rel="stylesheet">
+<!--    <script type="text/javascript" src="script.js"></script>-->
+    <script type="text/javascript" src="quizscript.js"></script>
+    
+    <script> 
+    $(function(){
+        $("#header").load("header.html"); 
+        $("#footer").load("footer.html"); 
+    });
+    </script>
+    
+    
+    
+</head>
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <div id="header"></div>
+
+
+            
+            
+            <div class="quiz_name">Drink Interest Quiz</div>
+
+            <div class="container">
+                    
+                    
+                <div id="allergies" class="page">
+                    <div class="row">
+                        <span class="q_title">Select Allergies:</span>
+                    </div>
+
+                    <label id="eggs" name="Eggs" class="q_item" oninput="this.className"> Egg
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label id="dairy" name="Dairy" class="q_item"> Dairy
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label id="soy" name="Soy" class="q_item"> Soy
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label id="tree-nuts" name="Tree Nuts" class="q_item"> Tree Nuts
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label id="wheat" name="Wheat" class="q_item"> Wheat
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <a href="quizreal.html"><button id="allergies_confirm" class="proceed">Next &gt;</button></a>
+                
+                
+            </div>
+            
+            
+            
+            
+            
+
+        </div>
+
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

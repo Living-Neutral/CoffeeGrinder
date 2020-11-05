@@ -1,0 +1,16 @@
+/*This style should apply to all pages*/
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(#222, #444);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#content-wrap {
+    padding-bottom: 50px;
+}

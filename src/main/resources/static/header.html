@@ -1,0 +1,104 @@
+<style>
+    .logo {
+        color: white !important;
+        font-family: 'Pacifico', cursive;
+        font-size: 20px;
+    }
+    
+    .navbar {
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+    
+    .navbar-side {
+        height: 100%;
+        width: 35%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #466e2f;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .navbar-side-item {
+        padding: 1.5rem 0;
+        margin: 3px;
+        height: 5rem;
+        background-color: #58873c;
+    }
+    
+    .navbar-side-item:hover {
+        background-color: #6ea64e;
+    }
+    
+    .navbar-side-item:active {
+        background-color: #3b6325;
+    }
+
+    .side-link {
+        color:white;
+        font-size: 20px;
+    }
+
+    .navbar-side {
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: 300ms ease;
+        transition: 300ms ease;
+    }
+
+     .reveal {
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: 300ms ease;
+        transition: 300ms ease;
+    }
+
+    .overlay {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        background-color: #000;
+        opacity: 0.6;
+        z-index: 990;
+    }
+    
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript" src="headerscript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!--source for navbar-->
+<nav class="navbar navbar-light navbar-static" role="navigation" style="background-color: #466e2f">
+    <button class="navbar-toggler pull-xs-right" id="navbarSideButton" type="button" style="color:white; border: none; font-size: 30px">
+        &#9776;
+    </button>
+    <ul class="navbar-side" id="navbarSide">
+        <li class="navbar-side-item text-center">
+          <a href="#" class="side-link">About</a>
+        </li>
+        <a href="/quiz1.html" class="side-link">
+            <li class="navbar-side-item text-center">
+              Quiz
+            </li>
+        </a>
+    </ul>
+    <div class="overlay"></div>
+
+    <!--need this to get centered somehow-->
+    <a class="navbar-brand logo" href="index.html">CoffeeGrinder</a>
+</nav>
