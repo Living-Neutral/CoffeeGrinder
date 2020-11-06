@@ -1,0 +1,153 @@
+h1 {
+  color: #7c795d;
+  font-family: 'Georgia';
+  font-size: 45px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 48px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+h2 {
+  text-align: center;
+  color: #CEF0D4;
+  font-family: monospace;
+  opacity: 0.5;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+/*    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);*/
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+.quiz_name {
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 40px;
+}
+
+.q_title {
+    color: white;
+    font-size: 30px;
+    padding: 30px 0;
+    padding-left: 5px;
+}
+
+.q_item {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    background-color: #4f4f4f;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.q_item:hover {
+    background-color: #424242;
+}
+
+.q_item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 6.5px;
+    left: 6.5px;
+    height: 25px;
+    width: 25px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.q_item input:checked ~ .checkmark {
+    background-color: #ccc;
+}
+
+
+
+.tile {
+    width: 300px;;
+    border-radius: 10px;
+    background-color: #444;
+    text-align: center;
+    transition: 0.3s;
+    margin: 5px;
+    display: inline-block;
+}
+
+.tile:hover {
+    background-color: #666;
+}
+
+.tileimage {
+    width: 280px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.tilename {
+    position: relative:;
+    top: -15px;
+    color: #eee;
+    font-size: 20px;
+}
+
+.prev_button {
+    position: relative;
+    left: -15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    margin-top: 30px;
+    padding: 5px 10px;
+    background-color: #444;
+    color: #bbb;
+    display: block;
+    padding-left: 5px;
+}
+
+.proceed {
+    position: relative;
+    left: -15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #6ea64e;
+    color: white;
+}
+
+.proceed:hover{
+    background-color: lightseagreen;
+}
