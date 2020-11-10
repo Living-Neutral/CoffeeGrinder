@@ -4,6 +4,7 @@ import com.sun.rowset.CachedRowSetImpl;
 
 import javax.sql.rowset.CachedRowSet;
 import java.sql.*;
+import java.util.Collection;
 
 public class DBSelect {
 
@@ -20,15 +21,22 @@ public class DBSelect {
             crs.populate(rs);
             System.out.println(crs);
             int i = 1;
+            Collection sb_drink_test =crs.toCollection();
+            
+            
+            System.out.println(sb_drink_test.toString());
+            
             
             while(crs.next() && i<=16)
             {
             	System.out.println(crs.getString(i));
             	i++;
             }
-            // )
+            
+            
         }
-        catch(Exception e){
+        catch(Exception e)
+        {
             System.out.println(e);
         }
     }
