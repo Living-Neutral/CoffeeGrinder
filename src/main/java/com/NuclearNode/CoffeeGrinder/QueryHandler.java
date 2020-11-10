@@ -32,6 +32,7 @@ public class QueryHandler
 		{
 			System.err.println(e);
 		
+			
 		}
 	}
 	
