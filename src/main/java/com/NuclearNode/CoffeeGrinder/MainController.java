@@ -34,18 +34,6 @@ public class MainController {
     	return starbucks_drink_service.getAllStarBucksDrinks();
     }
     
-    @RequestMapping(method = RequestMethod.POST, value = "/CoffeeGrinder/StarbucksDrinks/add/{id}")
-    public void addDrink(@PathVariable String id,StarbucksDrink sbD)
-    {
-    	starbucks_drink_service.updateStarBucksDrink(id,sbD);
-    }
-    
-    @RequestMapping(method=RequestMethod.DELETE, value="/CoffeGrinder/StarbucksDrinks/Delete/{id}")
-    public void deleteDrink(@PathVariable String id) 
-    {
-    	starbucks_drink_service.deleteStarbucksDrink(id);
-    }
-
     @Autowired
     FetchDrinkData fetchDrinkData;
 
