@@ -26,7 +26,8 @@ public class QueryHandler
 		            "root", "CoffeeGrinder1!");
 		    Statement smt = con.createStatement();
 		    ResultSet rs = smt.executeQuery(q1);
-		    crs = new CachedRowSetImpl();			
+		    CachedRowSetImpl crs = new CachedRowSetImpl();
+		    crs.populate(rs);
 		}
 		
 		catch (Exception e)
