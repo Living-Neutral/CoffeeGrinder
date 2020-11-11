@@ -56,14 +56,35 @@ public class MainController {
 
     @RequestMapping("CoffeeGrinder/dairy")
     public void dairyAllergy(){
-	    queryhandler.addAllergyQuery();
+	    queryhandler.addDairyAllergy();
 	    System.out.println("Query Successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/soy")
+    public void soyAllergy(){
+        queryhandler.addSoyAllergy();
+        System.out.println("Query Successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/treenuts")
+    public void nutsAllergy(){
+        queryhandler.addTreeNutsAllergy();
+        System.out.println("Query Successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/wheat")
+    public void wheatAllergy(){
+        queryhandler.addWheatAllergy();
+        System.out.println("Query Successful");
     }
 
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){
 	    return queryhandler.getQuery();
     }
+
+
+
 
     @Autowired
     FetchDrinkData fetchDrinkData;

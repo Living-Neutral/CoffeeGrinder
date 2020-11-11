@@ -24,7 +24,7 @@ public class QueryHandler
 	{
 		try 
 		{
-			String q1 = query;
+			String q1 = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
 			con = DriverManager.getConnection("jdbc:mysql://starbucks-drinks-online.ci8dkiszgiw2.us-east-2.rds.amazonaws.com:3299/CoffeeGrinder_drinks",
 		            "root", "CoffeeGrinder1!");
 		    Statement smt = con.createStatement();
@@ -43,10 +43,25 @@ public class QueryHandler
     {
     	return this.query;
     }
-	void addAllergyQuery()
+	void addDairyAllergy()
 	{
 		// adding to the query
 		query+=" WHERE dairy = \'1\' ";
+	}
+
+	void addSoyAllergy(){
+		//add soy allergy to query
+		query+=" WHERE soy = \'1\' ";
+	}
+
+	void addTreeNutsAllergy(){
+		//add soy allergy to query
+		query+=" WHERE treenuts = \'1\' ";
+	}
+
+	void addWheatAllergy(){
+		//add soy allergy to query
+		query+=" WHERE wheat = \'1\' ";
 	}
 	
 	void queryTest()
