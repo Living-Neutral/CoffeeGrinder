@@ -56,8 +56,18 @@ public class MainController {
 
     @RequestMapping("CoffeeGrinder/dairy")
     public void dairyAllergy(){
+<<<<<<< HEAD
 	    queryhandler.addDairyAllergy();
+=======
+	    queryhandler.addDiaryQuery();
+>>>>>>> ff4e19895b8b8dd90266b29a09fd1025f3e92ad6
 	    System.out.println("Query Successful");
+    }
+    
+    @RequestMapping("CoffeeGrinder/CreateCRS")
+    public void createCRS()
+    {
+    	queryhandler.createCRS();
     }
 
     @RequestMapping("CoffeeGrinder/soy")
