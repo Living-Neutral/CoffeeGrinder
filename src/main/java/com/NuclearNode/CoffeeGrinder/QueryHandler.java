@@ -18,6 +18,7 @@ public class QueryHandler
 	String database_name;
 	CachedRowSetImpl crs ;
 	Connection con;
+	String query = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
 	
 	QueryHandler()
 	{
@@ -38,9 +39,14 @@ public class QueryHandler
 		}
 	}
 	
-	void addQuery()
+    String getQuery()
+    {
+    	return this.query;
+    }
+	void addAllegeryQuery()
 	{
 		// adding to the query
+		query+=" WHERE dairy = \'1\' ";
 	}
 	
 	void queryTest()
@@ -56,6 +62,10 @@ public class QueryHandler
 		}	
 	}
 	
+	void createCRS()
+	{
+		
+	}
 
 	List <StarbucksDrink> makeSBOrder()
 	{
@@ -63,7 +73,6 @@ public class QueryHandler
 		try {
 			while(crs.next())
 			{
-				
 				StarbucksDrink sb_drink = new StarbucksDrink();
 				
 				sb_drink.setName(crs.getString(1));
