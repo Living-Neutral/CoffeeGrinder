@@ -45,7 +45,7 @@ public class QueryHandler
 	void addDairyQuery()
 
 	{
-		// adding to the query
+		// adding dairy allergy the query
 		query+=" WHERE dairy = \'1\' ";
 	}
 
@@ -55,13 +55,23 @@ public class QueryHandler
 	}
 
 	void addTreeNutsAllergy(){
-		//add soy allergy to query
+		//add treenuts allergy to query
 		query+=" WHERE treenuts = \'1\' ";
 	}
 
 	void addWheatAllergy(){
-		//add soy allergy to query
+		//add wheat allergy to query
 		query+=" WHERE wheat = \'1\' ";
+	}
+
+	void coldTemp(){
+		//return cold drinks
+		query+=" WHERE temperature = \'True\' ";
+	}
+
+	void hotTemp(){
+		//return hot drinks
+		query+=" WHERE temperature = \'False\' ";
 	}
 	
 	void queryTest()

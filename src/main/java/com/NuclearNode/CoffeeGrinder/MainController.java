@@ -86,6 +86,18 @@ public class MainController {
         System.out.println("Query Successful");
     }
 
+    @RequestMapping("CoffeeGrinder/cold")
+    public void coldDrinks(){
+	    queryhandler.coldTemp();
+	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/hot")
+    public void hotDrinks(){
+	    queryhandler.hotTemp();
+	    System.out.println("Query successful");
+    }
+
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){
 	    return queryhandler.getQuery();
