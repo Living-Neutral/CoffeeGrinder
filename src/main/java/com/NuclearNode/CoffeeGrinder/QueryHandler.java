@@ -46,22 +46,22 @@ public class QueryHandler
 
 	{
 		// adding to the query
-		query+=" WHERE dairy = \'1\' ";
+		query+=" WHERE dairy = 1 ";
 	}
 
 	void addSoyAllergy(){
 		//add soy allergy to query
-		query+=" WHERE soy = \'1\' ";
+		query+=" WHERE soy = 1 ";
 	}
 
 	void addTreeNutsAllergy(){
 		//add soy allergy to query
-		query+=" WHERE treenuts = \'1\' ";
+		query+=" WHERE treenuts = 1 ";
 	}
 
 	void addWheatAllergy(){
 		//add soy allergy to query
-		query+=" WHERE wheat = \'1\' ";
+		query+=" WHERE wheat = 1 ";
 	}
 	
 	void queryTest()
