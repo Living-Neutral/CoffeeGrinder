@@ -24,7 +24,7 @@ public class QueryHandler
 	{
 		try 
 		{
-			String q1 = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink WHERE type =\'Coffee\' AND dairy = 0";
+			String q1 = query;
 			con = DriverManager.getConnection("jdbc:mysql://starbucks-drinks-online.ci8dkiszgiw2.us-east-2.rds.amazonaws.com:3299/CoffeeGrinder_drinks",
 		            "root", "CoffeeGrinder1!");
 		    Statement smt = con.createStatement();
@@ -43,7 +43,7 @@ public class QueryHandler
     {
     	return this.query;
     }
-	void addAllegeryQuery()
+	void addAllergyQuery()
 	{
 		// adding to the query
 		query+=" WHERE dairy = \'1\' ";

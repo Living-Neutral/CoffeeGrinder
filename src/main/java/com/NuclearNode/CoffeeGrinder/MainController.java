@@ -53,6 +53,18 @@ public class MainController {
     {
     	queryhandler.queryTest();
     }
+
+    @RequestMapping("CoffeeGrinder/dairy")
+    public void dairyAllergy(){
+	    queryhandler.addAllergyQuery();
+	    System.out.println("Query Successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/get")
+    public String returnData(){
+	    return queryhandler.getQuery();
+    }
+
     @Autowired
     FetchDrinkData fetchDrinkData;
 
