@@ -59,6 +59,12 @@ public class MainController {
 	    queryhandler.addDiaryQuery();
 	    System.out.println("Query Successful");
     }
+    
+    @RequestMapping("CoffeeGrinder/CreateCRS")
+    public void createCRS()
+    {
+    	queryhandler.createCRS();
+    }
 
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){

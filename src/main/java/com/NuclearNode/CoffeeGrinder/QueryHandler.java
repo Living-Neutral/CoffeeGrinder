@@ -64,7 +64,16 @@ public class QueryHandler
 	
 	void createCRS()
 	{
+		try {
+			Statement smt = con.createStatement();
+			ResultSet rs = smt.executeQuery(query);
+			crs.populate(rs);
+		}
 		
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	List <StarbucksDrink> makeSBOrder()
