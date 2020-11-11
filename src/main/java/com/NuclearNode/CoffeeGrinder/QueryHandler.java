@@ -3,6 +3,7 @@ package com.NuclearNode.CoffeeGrinder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.springframework.stereotype.Service;
@@ -31,12 +32,27 @@ public class QueryHandler
 		catch (Exception e)
 		{
 			System.err.println(e);
-		
-			
 		}
 	}
 	
-	
+	String returnDrinkInfo(String id)
+	{
+		int i = 1;
+		try {
+			while(crs.next() & id != crs.getString(i))
+			{
+				if(id.equals(id))
+				{
+					return crs.getString(i+6);
+				}
+				i++;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "Couldn't find it";
+	}
 	
 	@SuppressWarnings("restriction")
 	void resetCachedSet() 

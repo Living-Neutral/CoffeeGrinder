@@ -20,7 +20,8 @@ public class MainController {
     @Autowired
     private StarbucksDrinkService starbucks_drink_service;
     
-    
+    //@Autowired
+    //private QueryHandler queryhandler;
     
 	@RequestMapping(value = "/CoffeeGrinder/home",method=RequestMethod.GET)
 	public String home()
@@ -34,6 +35,14 @@ public class MainController {
     	return starbucks_drink_service.getAllStarBucksDrinks();
     }
     
+    
+    @RequestMapping("CoffeeGrinder/StarbucksDrink/id")
+    public String getDrinkInfo()
+    {
+    	//return queryhandler.returnDrinkInfo("Blonde Roast");
+    	return "";
+    }
+    
     @Autowired
     FetchDrinkData fetchDrinkData;
 
@@ -42,25 +51,6 @@ public class MainController {
         return fetchDrinkData.findAll();
     }
     
-    @GetMapping(path="/sqlData")
-    String amazonSqlTest() throws SQLException
-    {
-    	String q1 = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
-    	Connection con = DriverManager.getConnection("jdbc:mysql://starbucks-drinks-online.ci8dkiszgiw2.us-east-2.rds.amazonaws.com:3299/CoffeeGrinder_drinks","root","CoffeeGrinder1!");
-    	Statement smt = con.createStatement();
-    	ResultSet rs = smt.executeQuery(q1);
-    	
-    	CachedRowSetImpl crs = new CachedRowSetImpl();
-        crs.populate(rs);
-        System.out.println(crs);
-        int i = 1;
-        String returned_result = "";
-        while(crs.next() && i<=16)
-        {
-        	returned_result+=crs.getString(i);
-        	i++;
-        }
-        return returned_result;
-    }
+    
 
 }
