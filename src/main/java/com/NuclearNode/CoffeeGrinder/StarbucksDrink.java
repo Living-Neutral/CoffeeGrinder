@@ -13,7 +13,9 @@ public class StarbucksDrink
 	private String name;
 	private String description;
 	private String type;
+	private String Temperature;
 	private String category;
+	private String image;
 	private float sugar_content;
 	private float serving_size;
 	private float relative_sugar;
@@ -30,13 +32,15 @@ public class StarbucksDrink
 	
 	}
 	
-	StarbucksDrink(String n,String desc, String t, String cat, float sug_con, float serv_s, 
+	StarbucksDrink(String n,String desc, String t,String tmp ,String cat,String link, float sug_con, float serv_s, 
 			float rel_sug, boolean dry,boolean sy, boolean t_nuts, boolean esp, boolean wht, boolean swtnss, boolean frty)
 	{
 		name = n;
 		description = desc;
 		type = t;
+		Temperature = tmp;
 		category = cat;
+		image = link;
 		sugar_content= sug_con;
 		serving_size=serv_s;
 		relative_sugar= rel_sug;
@@ -50,7 +54,7 @@ public class StarbucksDrink
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -58,7 +62,7 @@ public class StarbucksDrink
 	}
 
 	public String getDescription() {
-		return description;
+		return this.description;
 	}
 
 	public void setDescription(String description) {
@@ -72,13 +76,31 @@ public class StarbucksDrink
 	public void setType(String type) {
 		this.type = type;
 	}
+	
+	public void setTemp(String tmp) {
+		this.Temperature = tmp;
+	}
+	
+	public String getTemp()
+	{
+		return this.Temperature;
+	}
+	
 
 	public String getCategory() {
-		return category;
+		return this.category;
 	}
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	
+	
+	public String getImage() {
+		return this.image;
+	}
+	public void setImage(String img){
+		this.category = img;
 	}
 
 	public float getSugar_content() {
@@ -90,7 +112,7 @@ public class StarbucksDrink
 	}
 
 	public float getServing_size() {
-		return serving_size;
+		return this.serving_size;
 	}
 
 	public void setServing_size(float serving_size) {
@@ -98,7 +120,7 @@ public class StarbucksDrink
 	}
 
 	public float getRelative_sugar() {
-		return relative_sugar;
+		return this.relative_sugar;
 	}
 
 	public void setRelative_sugar(float relative_sugar) {
@@ -106,7 +128,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isDairy() {
-		return dairy;
+		return this.dairy;
 	}
 
 	public void setDairy(boolean dairy) {
@@ -114,7 +136,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isSoy() {
-		return soy;
+		return this.soy;
 	}
 
 	public void setSoy(boolean soy) {
@@ -122,7 +144,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isTree_nuts() {
-		return tree_nuts;
+		return this.tree_nuts;
 	}
 
 	public void setTree_nuts(boolean tree_nuts) {
@@ -130,7 +152,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isEspresso() {
-		return espresso;
+		return this.espresso;
 	}
 
 	public void setEspresso(boolean espresso) {
@@ -138,7 +160,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isWheat() {
-		return wheat;
+		return this.wheat;
 	}
 
 	public void setWheat(boolean wheat) {
@@ -146,7 +168,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isSweetness() {
-		return sweetness;
+		return this.sweetness;
 	}
 
 	public void setSweetness(boolean sweetness) {
@@ -154,7 +176,7 @@ public class StarbucksDrink
 	}
 
 	public boolean isFruity() {
-		return fruity;
+		return this.fruity;
 	}
 
 	public void setFruity(boolean fruity) {

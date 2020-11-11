@@ -20,8 +20,8 @@ public class MainController {
     @Autowired
     private StarbucksDrinkService starbucks_drink_service;
     
-    //@Autowired
-    //private QueryHandler queryhandler;
+    @Autowired
+    private QueryHandler queryhandler = new QueryHandler();
     
 	@RequestMapping(value = "/CoffeeGrinder/home",method=RequestMethod.GET)
 	public String home()
@@ -36,13 +36,23 @@ public class MainController {
     }
     
     
-    @RequestMapping("CoffeeGrinder/StarbucksDrink/id")
-    public String getDrinkInfo()
+    @RequestMapping("CoffeeGrinder/StarbucksDrink/CRStest")
+    public String getCRSINFO()
     {
-    	//return queryhandler.returnDrinkInfo("Blonde Roast");
-    	return "";
+    	return queryhandler.cachedrowtest();
     }
     
+    @RequestMapping("CoffeeGrinder/StarbucksDrink/FinalOrder")
+    public List<StarbucksDrink> returnOrder()
+    {
+    	return queryhandler.makeSBOrder();
+    }
+    
+    @RequestMapping("CoffeeGrinder/StarbucksDrink/querytest")
+    public void queryTest()
+    {
+    	queryhandler.queryTest();
+    }
     @Autowired
     FetchDrinkData fetchDrinkData;
 
