@@ -12,12 +12,6 @@ public class starbucksTest
 	}
 	
 	
-	@Test
-	public void testSetGetCategory()
-	{
-		sb_d.setCategory("Coffee");
-		
-	}
 	
 	@After
 	public void cleanUp()
