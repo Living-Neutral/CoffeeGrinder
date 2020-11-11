@@ -43,7 +43,7 @@ public class QueryHandler
     {
     	return this.query;
     }
-	void addAllergyQuery()
+	void addDiaryQuery()
 	{
 		// adding to the query
 		query+=" WHERE dairy = \'1\' ";

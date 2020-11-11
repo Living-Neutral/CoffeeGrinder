@@ -56,7 +56,7 @@ public class MainController {
 
     @RequestMapping("CoffeeGrinder/dairy")
     public void dairyAllergy(){
-	    queryhandler.addAllergyQuery();
+	    queryhandler.addDiaryQuery();
 	    System.out.println("Query Successful");
     }
 
