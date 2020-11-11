@@ -27,10 +27,7 @@ public class QueryHandler
 			String q1 = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
 			con = DriverManager.getConnection("jdbc:mysql://starbucks-drinks-online.ci8dkiszgiw2.us-east-2.rds.amazonaws.com:3299/CoffeeGrinder_drinks",
 		            "root", "CoffeeGrinder1!");
-		    Statement smt = con.createStatement();
-		    ResultSet rs = smt.executeQuery(q1);
-		    crs = new CachedRowSetImpl();
-		    crs.populate(rs);
+		    createCRS();
 		}
 		
 		catch (Exception e)
