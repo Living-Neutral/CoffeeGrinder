@@ -98,10 +98,89 @@ public class MainController {
 	    System.out.println("Query successful");
     }
 
+    @RequestMapping("CoffeeGrinder/coffees")
+    public void coffeeDrinks(){
+	    queryhandler.coffeeDrink();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/teas")
+    public void teaDrinks(){
+        queryhandler.teaDrink();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/others")
+    public void otherDrinks(){
+        queryhandler.otherDrink();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/fraps")
+    public void frapDrinks(){
+        queryhandler.frapDrink();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/espresso")
+    public void espresso(){
+	    queryhandler.espresso();
+	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/fruity")
+    public void fruity(){
+	    queryhandler.fruity();
+	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/refresher")
+    public void refresher(){
+	    queryhandler.refresher();
+	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/hotchocolate")
+    public void hotchocolate(){
+	    queryhandler.hotChocolate();
+	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/steamer")
+    public void steamer(){
+        queryhandler.steamer();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/juice")
+    public void juice(){
+        queryhandler.juice();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/creme")
+    public void cremeFrap(){
+        queryhandler.cremeFrap();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/coffeeFrap")
+    public void coffeeFrap(){
+        queryhandler.coffeeFrap();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/coconutmilk")
+    public void coconutMilk(){
+	    queryhandler.coconutMilk();
+	    System.out.println("Query successful");
+    }
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){
 	    return queryhandler.getQuery();
     }
+
+
 
 
 
