@@ -45,13 +45,13 @@ public class QueryHandler
 	void addDairyQuery()
 
 	{
-<<<<<<< HEAD
+
 		// adding dairy allergy the query
 		query+=" WHERE dairy = \'1\' ";
-=======
+
 		// adding to the query
 		query+=" WHERE dairy = 1 ";
->>>>>>> 69ffe604a7309d9c3cada715ea384572ec9f92b0
+
 	}
 
 	void addSoyAllergy(){
@@ -60,7 +60,7 @@ public class QueryHandler
 	}
 
 	void addTreeNutsAllergy(){
-<<<<<<< HEAD
+
 		//add treenuts allergy to query
 		query+=" WHERE treenuts = \'1\' ";
 	}
@@ -68,7 +68,7 @@ public class QueryHandler
 	void addWheatAllergy(){
 		//add wheat allergy to query
 		query+=" WHERE wheat = \'1\' ";
-=======
+
 		//add soy allergy to query
 		query+=" WHERE treenuts = 1 ";
 	}
@@ -76,7 +76,7 @@ public class QueryHandler
 	void addWheatAllergy(){
 		//add soy allergy to query
 		query+=" WHERE wheat = 1 ";
->>>>>>> 69ffe604a7309d9c3cada715ea384572ec9f92b0
+
 	}
 
 	void coldTemp(){
@@ -142,7 +142,7 @@ public class QueryHandler
 				sb_drink.setFruity(crs.getBoolean(16));
 				list_of_sb_drinks.add(sb_drink);
 			}
-			resetCachedSet();
+		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -170,7 +170,7 @@ public class QueryHandler
 				crs_info+="\n";
 			}
 			
-			resetCachedSet();
+	
 			return crs_info;
 		}
 		
@@ -208,7 +208,7 @@ public class QueryHandler
 	{
 		try 
 		{
-			crs = (CachedRowSetImpl) crs.getOriginal();
+			crs.beforeFirst();
 		}
 		
 		catch (Exception e)
