@@ -8,9 +8,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.cj.jdbc.result.ResultSetImpl;
 import org.springframework.stereotype.Service;
 
 import com.sun.rowset.CachedRowSetImpl;
+
+import javax.sql.RowSet;
 
 @Service 
 public class QueryHandler 
@@ -45,53 +48,53 @@ public class QueryHandler
 	void addDairyQuery()
 	{
 
-		query+=" WHERE dairy = 1 ";
+		query+=" WHERE dairy = 1 AND";
 	}
 
 	void addSoyAllergy(){
 		//add soy allergy to query
-		query+=" WHERE soy = 1 ";
+		query+=" WHERE soy = 1 AND";
 	}
 
 	void addTreeNutsAllergy(){
 		//add treenuts allergy to query
-		query+=" WHERE treenuts = 1 ";
+		query+=" WHERE treenuts = 1 AND";
 	}
 
 	void addWheatAllergy(){
 		//add soy allergy to query
-		query+=" WHERE wheat = 1 ";
+		query+=" WHERE wheat = 1 AND";
 
 	}
 
 	void coldTemp(){
 		//return cold drinks
-		query+=" WHERE temperature = \'True\' ";
+		query+=" WHERE temperature = \'True\' AND";
 	}
 
 	void hotTemp(){
 		//return hot drinks
-		query+=" WHERE temperature = \'False\' ";
+		query+=" WHERE temperature = \'False\' AND";
 	}
 
 	void coffeeDrink(){
 		//return all coffee type drinks
-		query+=" WHERE type = \'Coffee\' ";
+		query+=" WHERE type = \'Coffee\' AND";
 	}
 
 	void teaDrink(){
 		//return all tea type drinks
-		query+=" WHERE type = \'Tea\' ";
+		query+=" WHERE type = \'Tea\' AND";
 	}
 
 	void otherDrink(){
 		//return all other type drinks
-		query+=" WHERE type = \'Drink\' ";
+		query+=" WHERE type = \'Drink\' AND";
 	}
 
 	void frapDrink(){
 		//return all frappuccinos
-		query+=" WHERE type = \'Frappuccino\' ";
+		query+=" WHERE type = \'Frappuccino\' AND";
 	}
 
 	void espresso(){
@@ -103,10 +106,6 @@ public class QueryHandler
 	void fruity(){
 		//return drinks that are fruity
 		query+=" WHERE fruity = 1 ";
-	}
-
-	void nonFruity(){
-		query+=" WHERE fruity = 0 ";
 	}
 
 	void refresher(){

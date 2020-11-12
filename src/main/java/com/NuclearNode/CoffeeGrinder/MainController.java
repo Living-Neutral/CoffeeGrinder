@@ -170,6 +170,11 @@ public class MainController {
         System.out.println("Query successful");
     }
 
+    @RequestMapping("CoffeeGrinder/coconutmilk")
+    public void coconutMilk(){
+	    queryhandler.coconutMilk();
+	    System.out.println("Query successful");
+    }
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){
 	    return queryhandler.getQuery();
