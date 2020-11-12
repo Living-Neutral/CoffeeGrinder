@@ -43,15 +43,9 @@ public class QueryHandler
     }
 
 	void addDairyQuery()
-
 	{
-<<<<<<< HEAD
-		// adding dairy allergy the query
-		query+=" WHERE dairy = \'1\' ";
-=======
-		// adding to the query
+
 		query+=" WHERE dairy = 1 ";
->>>>>>> 69ffe604a7309d9c3cada715ea384572ec9f92b0
 	}
 
 	void addSoyAllergy(){
@@ -60,23 +54,14 @@ public class QueryHandler
 	}
 
 	void addTreeNutsAllergy(){
-<<<<<<< HEAD
 		//add treenuts allergy to query
-		query+=" WHERE treenuts = \'1\' ";
-	}
-
-	void addWheatAllergy(){
-		//add wheat allergy to query
-		query+=" WHERE wheat = \'1\' ";
-=======
-		//add soy allergy to query
 		query+=" WHERE treenuts = 1 ";
 	}
 
 	void addWheatAllergy(){
 		//add soy allergy to query
 		query+=" WHERE wheat = 1 ";
->>>>>>> 69ffe604a7309d9c3cada715ea384572ec9f92b0
+
 	}
 
 	void coldTemp(){
@@ -88,6 +73,78 @@ public class QueryHandler
 		//return hot drinks
 		query+=" WHERE temperature = \'False\' ";
 	}
+
+	void coffeeDrink(){
+		//return all coffee type drinks
+		query+=" WHERE type = \'Coffee\' ";
+	}
+
+	void teaDrink(){
+		//return all tea type drinks
+		query+=" WHERE type = \'Tea\' ";
+	}
+
+	void otherDrink(){
+		//return all other type drinks
+		query+=" WHERE type = \'Drink\' ";
+	}
+
+	void frapDrink(){
+		//return all frappuccinos
+		query+=" WHERE type = \'Frappuccino\' ";
+	}
+
+	void espresso(){
+		//return drinks containing espresso
+		query+=" WHERE espresso = 1 ";
+	}
+
+
+	void fruity(){
+		//return drinks that are fruity
+		query+=" WHERE fruity = 1 ";
+	}
+
+	void nonFruity(){
+		query+=" WHERE fruity = 0 ";
+	}
+
+	void refresher(){
+		//return refresher drinks
+		query+=" WHERE category = \'Starbucks Refresher\' ";
+	}
+
+	void coconutMilk(){
+		//return drinks that have coconut milk
+		query+=" WHERE category LIKE \'%Coconutmilk%\' ";
+	}
+
+	void hotChocolate(){
+		//returns hot chocolate drinks
+		query+=" WHERE category = \'Hot Chocolate\' ";
+	}
+
+	void juice(){
+		//returns juice drinks
+		query+=" WHERE category = \'Juice\' ";
+	}
+
+	void steamer(){
+		//returns steamer drinks
+		query+=" WHERE category = \'Steamer	\' ";
+	}
+
+	void cremeFrap(){
+		//returns creme type frappuccinos
+		query+=" WHERE category = \'Creme Frappuccino\' ";
+	}
+
+	void coffeeFrap(){
+		//returns coffee type frappuccinos
+		query+=" WHERE category = \'Coffee Frappuccino\' ";
+	}
+
+
 	
 	void queryTest()
 	{
