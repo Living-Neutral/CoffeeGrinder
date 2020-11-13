@@ -54,6 +54,13 @@ public class MainController {
     	queryhandler.queryTest();
     }
 
+    @RequestMapping("CoffeeGrinder/allergy")
+    public void generalAllergy()
+    {
+        queryhandler.generalAllergy();
+        System.out.println("Query Successful");
+    }
+
     @RequestMapping("CoffeeGrinder/dairy")
     public void dairyAllergy(){
 	    
@@ -173,7 +180,7 @@ public class MainController {
     @RequestMapping("CoffeeGrinder/coconutmilk")
     public void coconutMilk(){
 	    queryhandler.coconutMilk();
-	    System.out.println("Query successful"); 
+	    System.out.println("Query successful");
     }
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){

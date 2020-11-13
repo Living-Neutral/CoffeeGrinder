@@ -15,9 +15,14 @@ import com.sun.rowset.CachedRowSetImpl;
 
 import javax.sql.RowSet;
 
+
+
 @Service 
 public class QueryHandler 
 {
+
+	boolean yesvar = true;
+	boolean novar = false;
 	String database_name;
 	CachedRowSetImpl crs ;
 	Connection con;
@@ -44,29 +49,33 @@ public class QueryHandler
     	return this.query;
     }
 
+    void generalAllergy(){
+		query+=" WHERE allergy = 1 ";
+	}
+
 	void addDairyQuery()
 	{
-		query+=" WHERE dairy = 1 ";
+		query+=" AND dairy = 1 ";
 	}
 
 	void addSoyAllergy(){
 		//add soy allergy to query
-		query+=" WHERE soy = 1 ";
+		query+=" AND soy = 1 ";
 	}
 
 	void addTreeNutsAllergy(){
 		//add treenuts allergy to query
-		query+=" WHERE treenuts = 1 ";
+		query+=" AND treenuts =  ";
 	}
 
 	void addWheatAllergy() {
 		//add wheat allergy to query
-		query += " WHERE wheat = 1 ";
+		query += " AND wheat = 1 ";
 	}
 
 	void coldTemp(){
 		//return cold drinks
-		query+=" AND temperature = \'True\' ";
+		query+=" WHERE temperature = " + String.valueOf(yesvar);
 	}
 
 	void hotTemp(){
@@ -171,6 +180,7 @@ public class QueryHandler
 
 	List <StarbucksDrink> makeSBOrder()
 	{
+		resetCachedSet();
 		List<StarbucksDrink> list_of_sb_drinks = new ArrayList<StarbucksDrink>();
 		try {
 			while(crs.next())
@@ -180,7 +190,7 @@ public class QueryHandler
 				sb_drink.setName(crs.getString(1));
 				sb_drink.setDescription(crs.getString(2));
 				sb_drink.setType(crs.getString(3));
-				sb_drink.setTemp(crs.getString(4));
+				sb_drink.setTemp(crs.getBoolean(4));
 				sb_drink.setCategory(crs.getString(5));
 				sb_drink.setImage(crs.getString(6));
 				sb_drink.setSugar_content(crs.getFloat(7));

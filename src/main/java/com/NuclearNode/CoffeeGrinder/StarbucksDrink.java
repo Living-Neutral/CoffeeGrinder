@@ -13,7 +13,7 @@ public class StarbucksDrink
 	private String name;
 	private String description;
 	private String type;
-	private String Temperature;
+	private boolean Temperature;
 	private String category;
 	private String image;
 	private float sugar_content;
@@ -32,7 +32,7 @@ public class StarbucksDrink
 	
 	}
 	
-	StarbucksDrink(String n,String desc, String t,String tmp ,String cat,String link, float sug_con, float serv_s, 
+	StarbucksDrink(String n,String desc, String t,boolean tmp ,String cat,String link, float sug_con, float serv_s,
 			float rel_sug, boolean dry,boolean sy, boolean t_nuts, boolean esp, boolean wht, boolean swtnss, boolean frty)
 	{
 		name = n;
@@ -77,11 +77,11 @@ public class StarbucksDrink
 		this.type = type;
 	}
 	
-	public void setTemp(String tmp) {
+	public void setTemp(boolean tmp) {
 		this.Temperature = tmp;
 	}
 	
-	public String getTemp()
+	public boolean getTemp()
 	{
 		return this.Temperature;
 	}
