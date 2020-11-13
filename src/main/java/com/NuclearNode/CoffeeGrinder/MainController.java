@@ -173,7 +173,7 @@ public class MainController {
     @RequestMapping("CoffeeGrinder/coconutmilk")
     public void coconutMilk(){
 	    queryhandler.coconutMilk();
-	    System.out.println("Query successful");
+	    System.out.println("Query successful"); 
     }
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){

@@ -27,7 +27,6 @@ public class QueryHandler
 	{
 		try 
 		{
-			String q1 = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
 			con = DriverManager.getConnection("jdbc:mysql://starbucks-drinks-online.ci8dkiszgiw2.us-east-2.rds.amazonaws.com:3299/CoffeeGrinder_drinks",
 		            "root", "CoffeeGrinder1!");
 			crs = new CachedRowSetImpl();
@@ -47,126 +46,98 @@ public class QueryHandler
 
 	void addDairyQuery()
 	{
-
-<<<<<<< HEAD
-		// adding dairy allergy the query
-		query+=" WHERE dairy = \'1\' ";
-
-		// adding to the query
 		query+=" WHERE dairy = 1 ";
-
-=======
-		query+=" WHERE dairy = 1 AND";
->>>>>>> 110ec69bc67917db9e96bfc27ddc0116b2856873
 	}
 
 	void addSoyAllergy(){
 		//add soy allergy to query
-		query+=" WHERE soy = 1 AND";
+		query+=" WHERE soy = 1 ";
 	}
 
 	void addTreeNutsAllergy(){
-<<<<<<< HEAD
-
-=======
->>>>>>> 110ec69bc67917db9e96bfc27ddc0116b2856873
 		//add treenuts allergy to query
-		query+=" WHERE treenuts = 1 AND";
+		query+=" WHERE treenuts = 1 ";
 	}
 
-	void addWheatAllergy(){
-<<<<<<< HEAD
+	void addWheatAllergy() {
 		//add wheat allergy to query
-		query+=" WHERE wheat = \'1\' ";
-
-=======
->>>>>>> 110ec69bc67917db9e96bfc27ddc0116b2856873
-		//add soy allergy to query
-		query+=" WHERE wheat = 1 AND";
-
-<<<<<<< HEAD
-	void addWheatAllergy(){
-		//add soy allergy to query
-		query+=" WHERE wheat = 1 ";
-
-=======
->>>>>>> 110ec69bc67917db9e96bfc27ddc0116b2856873
+		query += " WHERE wheat = 1 ";
 	}
 
 	void coldTemp(){
 		//return cold drinks
-		query+=" WHERE temperature = \'True\' AND";
+		query+=" AND temperature = \'True\' ";
 	}
 
 	void hotTemp(){
 		//return hot drinks
-		query+=" WHERE temperature = \'False\' AND";
+		query+=" AND temperature = \'False\' ";
 	}
 
 	void coffeeDrink(){
 		//return all coffee type drinks
-		query+=" WHERE type = \'Coffee\' AND";
+		query+=" AND type = \'Coffee\' ";
 	}
 
 	void teaDrink(){
 		//return all tea type drinks
-		query+=" WHERE type = \'Tea\' AND";
+		query+=" AND type = \'Tea\' ";
 	}
 
 	void otherDrink(){
 		//return all other type drinks
-		query+=" WHERE type = \'Drink\' AND";
+		query+=" AND type = \'Drink\' ";
 	}
 
 	void frapDrink(){
 		//return all frappuccinos
-		query+=" WHERE type = \'Frappuccino\' AND";
+		query+=" AND type = \'Frappuccino\' ";
 	}
 
 	void espresso(){
 		//return drinks containing espresso
-		query+=" WHERE espresso = 1 ";
+		query+=" AND espresso = 1 ";
 	}
 
 
 	void fruity(){
 		//return drinks that are fruity
-		query+=" WHERE fruity = 1 ";
+		query+=" AND fruity = 1 ";
 	}
 
 	void refresher(){
 		//return refresher drinks
-		query+=" WHERE category = \'Starbucks Refresher\' ";
+		query+=" AND category = \'Starbucks Refresher\' ";
 	}
 
 	void coconutMilk(){
 		//return drinks that have coconut milk
-		query+=" WHERE category LIKE \'%Coconutmilk%\' ";
+		query+=" AND category LIKE \'%Coconutmilk%\' ";
 	}
 
 	void hotChocolate(){
 		//returns hot chocolate drinks
-		query+=" WHERE category = \'Hot Chocolate\' ";
+		query+=" AND category = \'Hot Chocolate\' ";
 	}
 
 	void juice(){
 		//returns juice drinks
-		query+=" WHERE category = \'Juice\' ";
+		query+=" AND category = \'Juice\' ";
 	}
 
 	void steamer(){
 		//returns steamer drinks
-		query+=" WHERE category = \'Steamer	\' ";
+		query+=" AND category = \'Steamer	\' ";
 	}
 
 	void cremeFrap(){
 		//returns creme type frappuccinos
-		query+=" WHERE category = \'Creme Frappuccino\' ";
+		query+=" AND category = \'Creme Frappuccino\' ";
 	}
 
 	void coffeeFrap(){
 		//returns coffee type frappuccinos
-		query+=" WHERE category = \'Coffee Frappuccino\' ";
+		query+=" AND category = \'Coffee Frappuccino\' ";
 	}
 
 
