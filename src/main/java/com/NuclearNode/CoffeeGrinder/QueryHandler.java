@@ -53,7 +53,7 @@ public class QueryHandler
     void generalAllergy()
 	{
 		//add first where to path
-		query+=" WHERE allergy = " + 0;
+		query+=" WHERE allergy = " + String.valueOf(novar);
 	}
 
 	void addDairyQuery()
@@ -89,22 +89,22 @@ public class QueryHandler
 
 	void coffeeDrink(){
 		//return all coffee type drinks
-		query+=" AND type = \'Coffee\' ";
+		query+=" AND type = 'Coffee'";
 	}
 
 	void teaDrink(){
 		//return all tea type drinks
-		query+=" WHERE type = 'Tea'";
+		query+=" AND type = 'Tea'";
 	}
 
 	void otherDrink(){
 		//return all other type drinks
-		query+=" AND type = \'Drink\' ";
+		query+=" AND type = 'Drink'";
 	}
 
 	void frapDrink(){
 		//return all frappuccinos
-		query+=" AND type = \'Frappuccino\' ";
+		query+=" AND type = 'Frappuccino'";
 	}
 
 	void espresso(){
@@ -120,37 +120,37 @@ public class QueryHandler
 
 	void refresher(){
 		//return refresher drinks
-		query+=" AND category = \'Starbucks Refresher\' ";
+		query+=" AND category = 'Starbucks Refresher'";
 	}
 
 	void coconutMilk(){
 		//return drinks that have coconut milk
-		query+=" AND category LIKE \'%Coconutmilk%\' ";
+		query+=" AND category LIKE '%Coconutmilk%'";
 	}
 
 	void hotChocolate(){
 		//returns hot chocolate drinks
-		query+=" AND category = \'Hot Chocolate\' ";
+		query+=" AND category = 'Hot Chocolate'";
 	}
 
 	void juice(){
 		//returns juice drinks
-		query+=" AND category = \'Juice\' ";
+		query+=" AND category = 'Juice'";
 	}
 
 	void steamer(){
 		//returns steamer drinks
-		query+=" AND category = \'Steamer	\' ";
+		query+=" AND category = 'Steamer'";
 	}
 
 	void cremeFrap(){
 		//returns creme type frappuccinos
-		query+=" AND category = \'Creme Frappuccino\' ";
+		query+=" AND category = 'Creme Frappuccino'";
 	}
 
 	void coffeeFrap(){
 		//returns coffee type frappuccinos
-		query+=" AND category = \'Coffee Frappuccino\' ";
+		query+=" AND category = 'Coffee Frappuccino'";
 	}
 
 	void firstSugar(){
@@ -284,6 +284,10 @@ public class QueryHandler
 			e.printStackTrace();
 		}
 		return "Couldn't find it";
+	}
+
+	void resetQuery(){
+		query = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
 	}
 	
 	@SuppressWarnings("restriction")

@@ -204,19 +204,9 @@ public class MainController {
 	    return queryhandler.getQuery();
     }
 
-
-
-
-
-
-    @Autowired
-    FetchDrinkData fetchDrinkData;
-
-    @GetMapping(path = "/getdata")
-    List<DrinkModel> getDrinks(){
-        return fetchDrinkData.findAll();
+    @RequestMapping("CoffeeGrinder/resetQuery")
+    public void resetQuery(){
+	    queryhandler.resetQuery();
     }
-    
-    
 
 }
