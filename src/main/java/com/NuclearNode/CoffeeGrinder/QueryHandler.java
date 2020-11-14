@@ -36,7 +36,7 @@ public class QueryHandler
 		            "root", "CoffeeGrinder1!");
 			Statement smt = con.createStatement();
 			crs = new CachedRowSetImpl();
-		    createCRS();
+		    //createCRS();
 		}
 		
 		catch (Exception e)
@@ -198,6 +198,7 @@ public class QueryHandler
 
 	List <StarbucksDrink> makeSBOrder()
 	{
+		createCRS();
 		List<StarbucksDrink> list_of_sb_drinks = new ArrayList<StarbucksDrink>();
 		try {
 			while(crs.next())
