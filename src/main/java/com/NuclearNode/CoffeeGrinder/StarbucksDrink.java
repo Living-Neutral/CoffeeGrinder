@@ -101,7 +101,7 @@ public class StarbucksDrink
 		return this.image;
 	}
 	public void setImage(String img){
-		this.category = img;
+		this.image = img;
 	}
 
 	public float getSugar_content() {
