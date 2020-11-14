@@ -23,7 +23,6 @@ public class QueryHandler
 
 	boolean yesvar = true;
 	boolean novar = false;
-	String database_name;
 	CachedRowSetImpl crs ;
 	Connection con;
 	String query = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
@@ -93,7 +92,7 @@ public class QueryHandler
 
 	void teaDrink(){
 		//return all tea type drinks
-		query+=" AND type = \'Tea\' ";
+		query+=" WHERE type = Tea";
 	}
 
 	void otherDrink(){
@@ -206,19 +205,20 @@ public class QueryHandler
 				sb_drink.setName(crs.getString(1));
 				sb_drink.setDescription(crs.getString(2));
 				sb_drink.setType(crs.getString(3));
-				sb_drink.setTemp(crs.getBoolean(4));
-				sb_drink.setCategory(crs.getString(5));
-				sb_drink.setImage(crs.getString(6));
-				sb_drink.setSugar_content(crs.getFloat(7));
-				sb_drink.setServing_size(crs.getFloat(8));
-				sb_drink.setRelative_sugar(crs.getFloat(9));
-				sb_drink.setDairy(crs.getBoolean(10));
-				sb_drink.setSoy(crs.getBoolean(11));
-				sb_drink.setTree_nuts(crs.getBoolean(12));
-				sb_drink.setEspresso(crs.getBoolean(13));
-				sb_drink.setWheat(crs.getBoolean(14));
-				sb_drink.setSweetness(crs.getBoolean(15));
-				sb_drink.setFruity(crs.getBoolean(16));
+				sb_drink.setCategory(crs.getString(4));
+				sb_drink.setImage(crs.getString(5));
+				sb_drink.setSugar_content(crs.getFloat(6));
+				sb_drink.setServing_size(crs.getFloat(7));
+				sb_drink.setRelative_sugar(crs.getFloat(8));
+				sb_drink.setTemp(crs.getBoolean(9));
+				sb_drink.setAllergy(crs.getBoolean(10));
+				sb_drink.setDairy(crs.getBoolean(11));
+				sb_drink.setSoy(crs.getBoolean(12));
+				sb_drink.setTree_nuts(crs.getBoolean(13));
+				sb_drink.setEspresso(crs.getBoolean(14));
+				sb_drink.setWheat(crs.getBoolean(15));
+				sb_drink.setSweetness(crs.getBoolean(16));
+				sb_drink.setFruity(crs.getBoolean(17));
 				list_of_sb_drinks.add(sb_drink);
 			}
 			resetCachedSet();

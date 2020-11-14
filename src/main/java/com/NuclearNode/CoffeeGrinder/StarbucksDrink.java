@@ -14,6 +14,7 @@ public class StarbucksDrink
 	private String description;
 	private String type;
 	private boolean Temperature;
+	private boolean allergy;
 	private String category;
 	private String image;
 	private float sugar_content;
@@ -142,6 +143,10 @@ public class StarbucksDrink
 	public void setSoy(boolean soy) {
 		this.soy = soy;
 	}
+
+	public void setAllergy(boolean allergy) {this.allergy = allergy;}
+
+	public boolean isAllergy() {return this.allergy;}
 
 	public boolean isTree_nuts() {
 		return this.tree_nuts;
