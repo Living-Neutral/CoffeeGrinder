@@ -42,7 +42,7 @@ public class MainController {
     	return queryhandler.cachedrowtest();
     }
     
-    @RequestMapping("CoffeeGrinder/StarbucksDrink/FinalOrder")
+    @RequestMapping("CoffeeGrinder/FinalOrder")
     public List<StarbucksDrink> returnOrder()
     {
     	return queryhandler.makeSBOrder();
@@ -181,6 +181,24 @@ public class MainController {
     public void coconutMilk(){
 	    queryhandler.coconutMilk();
 	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/firstSugar")
+    public void firstSugar(){
+	    queryhandler.firstSugar();
+	    System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/secondSugar")
+    public void secondSugar(){
+        queryhandler.secondSugar();
+        System.out.println("Query successful");
+    }
+
+    @RequestMapping("CoffeeGrinder/thirdSugar")
+    public void thirdSugar(){
+        queryhandler.thirdSugar();
+        System.out.println("Query successful");
     }
     @RequestMapping("CoffeeGrinder/get")
     public String returnData(){

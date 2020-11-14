@@ -49,38 +49,41 @@ public class QueryHandler
     	return this.query;
     }
 
-    void generalAllergy(){
-		query+=" WHERE allergy = 1 ";
+    void generalAllergy()
+	{
+		//add first where to path
+		query+=" WHERE allergy = " + String.valueOf(novar);
 	}
 
 	void addDairyQuery()
 	{
-		query+=" AND dairy = 1 ";
+		//add dairy allergy to query
+		query+=" AND dairy = " + String.valueOf(novar);
 	}
 
 	void addSoyAllergy(){
 		//add soy allergy to query
-		query+=" AND soy = 1 ";
+		query+=" AND soy = " + String.valueOf(novar);
 	}
 
 	void addTreeNutsAllergy(){
 		//add treenuts allergy to query
-		query+=" AND treenuts =  ";
+		query+=" AND treenuts =  " + String.valueOf(novar);
 	}
 
 	void addWheatAllergy() {
 		//add wheat allergy to query
-		query += " AND wheat = 1 ";
+		query += " AND wheat = " + String.valueOf(novar);
 	}
 
 	void coldTemp(){
 		//return cold drinks
-		query+=" WHERE temperature = " + String.valueOf(yesvar);
+		query+=" AND temperature = " + String.valueOf(yesvar);
 	}
 
 	void hotTemp(){
 		//return hot drinks
-		query+=" AND temperature = \'False\' ";
+		query+=" AND temperature = " + String.valueOf(novar);
 	}
 
 	void coffeeDrink(){
@@ -105,13 +108,13 @@ public class QueryHandler
 
 	void espresso(){
 		//return drinks containing espresso
-		query+=" AND espresso = 1 ";
+		query+=" AND espresso = " + String.valueOf(yesvar);
 	}
 
 
 	void fruity(){
 		//return drinks that are fruity
-		query+=" AND fruity = 1 ";
+		query+=" AND fruity = " + String.valueOf(yesvar);
 	}
 
 	void refresher(){
@@ -149,6 +152,20 @@ public class QueryHandler
 		query+=" AND category = \'Coffee Frappuccino\' ";
 	}
 
+	void firstSugar(){
+		//returns first level of sugar
+		query+=" AND relative_sugar <= 1.5";
+	}
+
+	void secondSugar(){
+		//returns second level of sugar
+		query+= " AND relative_sugar BETWEEN 1.5 AND 2.5";
+	}
+
+	void thirdSugar(){
+		//returns highest level of sugar
+		query+= " AND relative_sugar >= 2.5";
+	}
 
 	
 	void queryTest()
@@ -180,7 +197,6 @@ public class QueryHandler
 
 	List <StarbucksDrink> makeSBOrder()
 	{
-		resetCachedSet();
 		List<StarbucksDrink> list_of_sb_drinks = new ArrayList<StarbucksDrink>();
 		try {
 			while(crs.next())
@@ -205,6 +221,7 @@ public class QueryHandler
 				sb_drink.setFruity(crs.getBoolean(16));
 				list_of_sb_drinks.add(sb_drink);
 			}
+			resetCachedSet();
 		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
