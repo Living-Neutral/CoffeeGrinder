@@ -51,7 +51,7 @@ public class QueryHandler
     void generalAllergy()
 	{
 		//add first where to path
-		query+=" WHERE allergy = " + String.valueOf(novar);
+		query+=" WHERE allergy = " + 0;
 	}
 
 	void addDairyQuery()
@@ -202,23 +202,23 @@ public class QueryHandler
 			{
 				StarbucksDrink sb_drink = new StarbucksDrink();
 				
-				sb_drink.setName(crs.getString(1));
-				sb_drink.setDescription(crs.getString(2));
-				sb_drink.setType(crs.getString(3));
-				sb_drink.setCategory(crs.getString(4));
-				sb_drink.setImage(crs.getString(5));
-				sb_drink.setSugar_content(crs.getFloat(6));
-				sb_drink.setServing_size(crs.getFloat(7));
-				sb_drink.setRelative_sugar(crs.getFloat(8));
-				sb_drink.setTemp(crs.getBoolean(9));
-				sb_drink.setAllergy(crs.getBoolean(10));
-				sb_drink.setDairy(crs.getBoolean(11));
-				sb_drink.setSoy(crs.getBoolean(12));
-				sb_drink.setTree_nuts(crs.getBoolean(13));
-				sb_drink.setEspresso(crs.getBoolean(14));
-				sb_drink.setWheat(crs.getBoolean(15));
-				sb_drink.setSweetness(crs.getBoolean(16));
-				sb_drink.setFruity(crs.getBoolean(17));
+				sb_drink.setName(crs.getString("name"));
+				sb_drink.setDescription(crs.getString("description"));
+				sb_drink.setType(crs.getString("type"));
+				sb_drink.setCategory(crs.getString("category"));
+				sb_drink.setImage(crs.getString("image"));
+				sb_drink.setSugar_content(crs.getFloat("sugar_content"));
+				sb_drink.setServing_size(crs.getFloat("serving_size"));
+				sb_drink.setRelative_sugar(crs.getFloat("relative_sugar"));
+				sb_drink.setTemp(crs.getBoolean("temperature"));
+				sb_drink.setAllergy(crs.getBoolean("allergy"));
+				sb_drink.setDairy(crs.getBoolean("dairy"));
+				sb_drink.setSoy(crs.getBoolean("soy"));
+				sb_drink.setTree_nuts(crs.getBoolean("treenuts"));
+				sb_drink.setEspresso(crs.getBoolean("espresso"));
+				sb_drink.setWheat(crs.getBoolean("wheat"));
+				sb_drink.setSweetness(crs.getBoolean("sweetness"));
+				sb_drink.setFruity(crs.getBoolean("fruity"));
 				list_of_sb_drinks.add(sb_drink);
 			}
 			resetCachedSet();
