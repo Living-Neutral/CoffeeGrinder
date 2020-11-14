@@ -65,7 +65,6 @@ public class MainController {
     public void dairyAllergy(){
 	    
 	    queryhandler.addDairyQuery();
-
 	    System.out.println("Query Successful");
     }
     

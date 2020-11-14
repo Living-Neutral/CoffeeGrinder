@@ -26,6 +26,7 @@ public class QueryHandler
 	CachedRowSetImpl crs ;
 	Connection con;
 	String query = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
+
 	
 	QueryHandler()
 	{
@@ -33,6 +34,7 @@ public class QueryHandler
 		{
 			con = DriverManager.getConnection("jdbc:mysql://starbucks-drinks-online.ci8dkiszgiw2.us-east-2.rds.amazonaws.com:3299/CoffeeGrinder_drinks",
 		            "root", "CoffeeGrinder1!");
+			Statement smt = con.createStatement();
 			crs = new CachedRowSetImpl();
 		    createCRS();
 		}
@@ -92,7 +94,7 @@ public class QueryHandler
 
 	void teaDrink(){
 		//return all tea type drinks
-		query+=" WHERE type = Tea";
+		query+=" WHERE type = 'Tea'";
 	}
 
 	void otherDrink(){
