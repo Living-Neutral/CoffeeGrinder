@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.rowset.CachedRowSetImpl;
 
 @RestController
@@ -22,6 +23,18 @@ public class MainController {
     
     @Autowired
     private QueryHandler queryhandler = new QueryHandler();
+    
+    @RequestMapping(value = "/directory")
+    public String directory()
+    {
+    	return queryhandler.directory();
+    }
+    
+    @RequestMapping(value="/jsonTest")
+    public void jsonWriteTest()
+    {
+    	queryhandler.writeJson();
+    }
     
 	@RequestMapping(value = "/CoffeeGrinder/home",method=RequestMethod.GET)
 	public String home()

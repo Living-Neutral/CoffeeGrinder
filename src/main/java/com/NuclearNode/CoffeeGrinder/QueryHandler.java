@@ -1,5 +1,7 @@
 package com.NuclearNode.CoffeeGrinder;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -8,6 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mysql.cj.jdbc.result.ResultSetImpl;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +29,7 @@ public class QueryHandler
 	CachedRowSetImpl crs ;
 	Connection con;
 	String query = "SELECT * FROM CoffeeGrinder_drinks.starbucks_drink";
-
+	private static ObjectMapper obj_mapper = new ObjectMapper();
 	
 	QueryHandler()
 	{
@@ -167,6 +170,8 @@ public class QueryHandler
 		//returns highest level of sugar
 		query+= " AND relative_sugar >= 2.5";
 	}
+	
+	
 
 	
 	void queryTest()
@@ -223,6 +228,8 @@ public class QueryHandler
 				sb_drink.setSweetness(crs.getBoolean("sweetness"));
 				sb_drink.setFruity(crs.getBoolean("fruity"));
 				list_of_sb_drinks.add(sb_drink);
+				
+				
 			}
 			resetCachedSet();
 		
@@ -233,6 +240,29 @@ public class QueryHandler
 		return list_of_sb_drinks;
 	}
 	
+	void writeJson()
+	{
+		String working_path = System.getProperty("user.dir");
+		working_path+="//src//main//resources//static";
+		List<StarbucksDrink> sb_drinks = makeSBOrder();
+		
+		try 
+		{
+			FileOutputStream file_stream = new FileOutputStream(working_path+"//drinks.json");
+			obj_mapper.writeValue(file_stream, sb_drinks);
+			
+		}
+		catch(Exception fe)
+		{
+			fe.printStackTrace();
+		}
+		
+	}
+	
+	String directory()
+	{
+		return System.getProperty("user.dir");
+	}
 	
 	
 	
