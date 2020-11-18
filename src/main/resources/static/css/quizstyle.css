@@ -10,9 +10,19 @@ body {
 
 
 
+.drink-photo{
+    width:200px;
+    height:200px;
+    padding:5px;
+    
+}
 
-
-
+.results h1{
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    
+}
 
 .quiz_name {
     padding-top: 20px;
