@@ -1,22 +1,4 @@
-h1 {
-  color: #7c795d;
-  font-family: 'Georgia';
-  font-size: 45px;
-  font-style: italic;
-  font-weight: normal;
-  line-height: 48px;
-  text-align: center;
-  margin-top: 5%;
-}
-
-h2 {
-  text-align: center;
-  color: #CEF0D4;
-  font-family: monospace;
-  opacity: 0.5;
-}
-
-html {
+html, body {
     height: 100%;
 }
 
@@ -122,6 +104,32 @@ body {
     font-size: 20px;
 }
 
+.card {
+    width: 300px;;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+    transition: 0.3s;
+    margin: 5px;
+    display: inline-block;
+}
+
+.card:hover {
+    background-color: darkgray;
+}
+
+.cardimage {
+    width: 280px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.cardname {
+    position: relative:;
+    top: -15px;
+    color: #eee;
+    font-size: 20px;
+}
 .prev_button {
     position: relative;
     left: -15px;
@@ -149,5 +157,37 @@ body {
 }
 
 .proceed:hover{
-    background-color: lightseagreen;
+    background-color: #83c25f;
+}
+
+.yes {
+    position: relative;
+    left: 70px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #6ea64e;
+    color: white;
+}
+
+.yes:hover{
+    background-color: #83c25f;
+}
+
+.no {
+    position: relative;
+    left: 160px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #6ea64e;
+    color: white;
+}
+
+.no:hover{
+    background-color: #83c25f;
 }

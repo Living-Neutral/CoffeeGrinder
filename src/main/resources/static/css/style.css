@@ -1,14 +1,22 @@
 /*This style should apply to all pages*/
+html, body {
+    height: 100% !important;
+}
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
+.page-container {
+    min-height: 100%;
+    margin-bottom: -50px;
     background-image: linear-gradient(#222, #444);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+.page-container:after {
+    content: "";
+    display: block;
 }
 
 #content-wrap {

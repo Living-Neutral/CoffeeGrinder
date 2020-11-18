@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 .quizbutton {
     border:none;
     background-color: #58873c;
@@ -6,10 +10,11 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    transition: 0.3s;
 }
 
 .quizbutton:hover{
-    background-color: darkseagreen;
+    background-color: #6ea64e;
 }
 
 .welcome {

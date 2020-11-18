@@ -17,7 +17,7 @@
     <link href="css/quizstyle.css" rel="stylesheet">
 <!--    <script type="text/javascript" src="script.js"></script>-->
     <script type="text/javascript" src="action/quizscript.js"></script>
-    
+    <script type="" src = "action/drink-script.js">
     <script> 
     $(function(){
         $("#header").load("header.html"); 
@@ -29,8 +29,8 @@
     
 </head>
 <body>
-    <div id="page-container">
-        <div id="content-wrap">
+    <div class="page-container">
+        <div id="content-wrap">   
             <div id="header"></div>
 
 
@@ -287,16 +287,25 @@
                 </div>
                 
                 
-                <div id="results" class="page" style="display: none">
-                    <div class="row">
-                        <span class="q_title">Results:</span>
-                    </div>
+                <div id="results" class="results" style="display: none">
+                    <div class="results" style="color: white; font-size: 30px; text-align: center">Your Coffee Grinder Results:</div>
+                    <div class="row" style="justify-content: center">
+<!--                        <span class="q_title">Results:</span>-->
 
+<!--
                     <div class="tile">
                         <img src="images/hot%20tea.jpg" class="tileimage"/>
-                        <div class="tilename">filler</div>
+-->
+                        <div class="card" style="overflow: auto; padding: 50px">
+                            <img src="images/cold%20caramel%20frap.jpg" alt="Cold Caramel Frap" style="width:100%">
+                                <div class="container">
+                                <h4><b>Drink Name</b></h4>
+                                <p>Drink Description</p>
+                                </div>
+                            </div>
+                        
                     </div>
-                </div>
+                </div></div>
                 
                 
                 
@@ -312,7 +321,8 @@
 
         </div>
 
-        <div id="footer"></div>
+        
     </div>
+    <div id="footer"></div>
 </body>
 </html>
