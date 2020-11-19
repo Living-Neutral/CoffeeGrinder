@@ -14,13 +14,12 @@ body {
     width:200px;
     height:200px;
     padding:5px;
-    
 }
 
 .results h1{
     text-align: center;
     font-size: 30px;
-    color:white;
+    color:black;
     
 }
 
@@ -32,6 +31,7 @@ body {
     color: white;
     font-size: 40px;
 }
+
 
 .q_title {
     color: white;

@@ -36,7 +36,7 @@
 
             
             
-            <div class="quiz_name">Drink Interest Quiz</div>
+            <div class="quiz_name">Coffee Grinder Quiz</div>
 
             <div class="container">
                     
@@ -45,12 +45,12 @@
                     <div class="row">
                         <span class="q_title">Hot or Cold?</span>
                     </div>
-
-                    <div class="tile" onClick="hide('hotcold'); goto('hot'); register('hot');">
+                    
+                    <div class="tile" onClick="hide('hotcold'); goto('hot'); register('hot'); updateHot(); ">
                         <img src="images/hot%20Cropped.jpg" class="tileimage"/>
                         <div class="tilename">Hot</div>
                     </div>
-                    <div class="tile" onClick="hide('hotcold'); goto('cold'); register('cold');">
+                    <div class="tile" onClick="hide('hotcold'); goto('cold'); register('cold'); updateCold();">
                         <img src="images/cold%20Cropped.jpg" class="tileimage"/>
                         <div class="tilename">Cold</div>
                     </div>
@@ -63,15 +63,18 @@
                         <span class="q_title">Coffee, Tea, or Other Hot Drink?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('hot'); goto('hotcoffee'); register('hotcoffee');">
+                    <div class="tile" onClick="hide('hot'); goto('hotcoffee'); register('hotcoffee');
+                                               updateCoffee();">
                         <img src="images/hot%20coffee.jpg" class="tileimage"/>
                         <div class="tilename">Coffee</div>
                     </div>
-                    <div class="tile" onClick="hide('hot'); goto('hottea'); register('hottea');">
+                    <div class="tile" onClick="hide('hot'); goto('hottea'); register('hottea');
+                                               updateTea();">
                         <img src="images/hot%20tea.jpg" class="tileimage"/>
                         <div class="tilename">Tea</div>
                     </div>
-                    <div class="tile" onClick="hide('hot'); goto('otherhot'); register('otherhot');">
+                    <div class="tile" onClick="hide('hot'); goto('otherhot'); register('otherhot');
+                                               updateOther();">
                         <img src="images/other%20hot.jpg" class="tileimage"/>
                         <div class="tilename">Other</div>
                     </div>
@@ -84,19 +87,20 @@
                         <span class="q_title">Frappuccino, Coffee, Tea, or Other Cold Drink?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('cold'); goto('frappuccino'); register('frappuccino');">
+                    <div class="tile" onClick="hide('cold'); goto('frappuccino'); register('frappuccino');updateFrap();">
                         <img src="images/frappuccino.jpg" class="tileimage"/>
                         <div class="tilename">Frappuccino</div>
                     </div>
-                    <div class="tile" onClick="hide('cold'); goto('icedcoffee'); register('icedcoffee');">
+                    <div class="tile" onClick="hide('cold'); goto('icedcoffee'); register('icedcoffee');updateCoffee();">
                         <img src="images/iced%20coffee.jpg" class="tileimage"/>
                         <div class="tilename">Coffee</div>
                     </div>
-                    <div class="tile" onClick="hide('cold'); goto('icedtea'); register('icedtea');">
+                    <div class="tile" onClick="hide('cold'); goto('icedtea'); register('icedtea');
+                                               updateTea();">
                         <img src="images/iced%20tea.jpg" class="tileimage"/>
                         <div class="tilename">Tea</div>
                     </div>
-                    <div class="tile" onClick="hide('cold'); goto('othercold'); register('othercold');">
+                    <div class="tile" onClick="hide('cold'); goto('othercold'); register('othercold');updateOther();">
                         <img src="images/other%20cold.jpg" class="tileimage"/>
                         <div class="tilename">Other</div>
                     </div>
@@ -110,11 +114,11 @@
                         <span class="q_title">Contains espresso?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('hotcoffee'); goto('sugar'); register('hotespresso');">
+                    <div class="tile" onClick="hide('hotcoffee'); goto('sugar'); register('hotespresso');yesEspresso();">
                         <img src="images/hot%20espresso.jpg" class="tileimage"/>
                         <div class="tilename">Espresso</div>
                     </div>
-                    <div class="tile" onClick="hide('hotcoffee'); goto('sugar'); register('hotnoespresso');">
+                    <div class="tile" onClick="hide('hotcoffee'); goto('sugar'); register('hotnoespresso');noEspresso();">
                         <img src="images/no%20hot%20espresso.jpg" class="tileimage"/>
                         <div class="tilename">No Espresso</div>
                     </div>
@@ -128,11 +132,12 @@
                         <span class="q_title">Fruity?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('hottea'); goto('sugar'); register('hotfruity');">
+                    <div class="tile" onClick="hide('hottea'); goto('sugar'); register('hotfruity');
+                                               yesFruity();">
                         <img src="images/hot%20fruity.jpg" class="tileimage"/>
                         <div class="tilename">Fruity</div>
                     </div>
-                    <div class="tile" onClick="hide('hottea'); goto('sugar'); register('hotnofruity');">
+                    <div class="tile" onClick="hide('hottea'); goto('sugar'); register('hotnofruity'); noFruity();">
                         <img src="images/no%20hot%20fruity.jpg" class="tileimage"/>
                         <div class="tilename">Not Fruity</div>
                     </div>
@@ -146,15 +151,15 @@
                         <span class="q_title">Hot Chocolate, Juice, or Steamer?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('otherhot'); goto('sugar'); register('hotchocolate');">
+                    <div class="tile" onClick="hide('otherhot'); goto('sugar'); register('hotchocolate'); yesHot_Chocolate();">
                         <img src="images/hot%20chocolate.jpg" class="tileimage"/>
                         <div class="tilename">Hot Chocolate</div>
                     </div>
-                    <div class="tile" onClick="hide('otherhot'); goto('sugar'); register('hotjuice');">
+                    <div class="tile" onClick="hide('otherhot'); goto('sugar'); register('hotjuice'); yesJuice();">
                         <img src="images/hot%20juice.jpg" class="tileimage"/>
                         <div class="tilename">Hot Juice</div>
                     </div>
-                    <div class="tile" onClick="hide('otherhot'); goto('sugar'); register('hotsteamer');">
+                    <div class="tile" onClick="hide('otherhot'); goto('sugar'); register('hotsteamer'); yesSteamer();">
                         <img src="images/hot%20steamer.jpg" class="tileimage"/>
                         <div class="tilename">Hot Steamer</div>
                     </div>
@@ -176,13 +181,13 @@
                         <img src="images/cold%20mocha%20frap.jpg" class="tileimage"/>
                         <div class="tilename">Mocha</div>
                     </div>
-                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldcoffeefrap');">
+                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldcoffeefrap'); yesCoffee_Frappuccino();">
                         <img src="images/cold%20coffee%20frap.jpg" class="tileimage"/>
                         <div class="tilename">Coffee</div>
                     </div>
-                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldchocolatefrap');">
+                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldchocolatefrap'); yesCreme_Frappuccino();">
                         <img src="images/cold%20chocolate%20frap.jpg" class="tileimage"/>
-                        <div class="tilename">Chocolate</div>
+                        <div class="tilename">Creme</div>
                     </div>
                     <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldnochocolatefrap');">
                         <img src="images/cold%20no%20chocolate%20frap.jpg" class="tileimage"/>
@@ -198,11 +203,11 @@
                         <span class="q_title">Contains Espresso?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldespresso');">
+                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldespresso');yesEspresso();">
                         <img src="images/cold%20espresso.jpg" class="tileimage"/>
                         <div class="tilename">Espresso</div>
                     </div>
-                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldnoespresso');">
+                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldnoespresso');noEspresso();">
                         <img src="images/no%20cold%20espresso.jpg" class="tileimage"/>
                         <div class="tilename">No Espresso</div>
                     </div>
@@ -216,11 +221,11 @@
                         <span class="q_title">Contains Espresso?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldespresso');">
+                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldespresso'); yesEspresso();">
                         <img src="images/cold%20espresso.jpg" class="tileimage"/>
                         <div class="tilename">Espresso</div>
                     </div>
-                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldnoespresso');">
+                    <div class="tile" onClick="hide('icedcoffee'); goto('sugar'); register('coldnoespresso'); noEspresso();">
                         <img src="images/no%20cold%20espresso.jpg" class="tileimage"/>
                         <div class="tilename">No Espresso</div>
                     </div>
@@ -234,11 +239,11 @@
                         <span class="q_title">Fruity?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('icedtea'); goto('sugar'); register('coldfruity');">
+                    <div class="tile" onClick="hide('icedtea'); goto('sugar'); register('coldfruity'); yesFruity();">
                         <img src="images/cold%20fruity.jpg" class="tileimage"/>
                         <div class="tilename">Fruity</div>
                     </div>
-                    <div class="tile" onClick="hide('icedtea'); goto('sugar'); register('coldnofruity');">
+                    <div class="tile" onClick="hide('icedtea'); goto('sugar'); register('coldnofruity'); noFruity();">
                         <img src="images/no%20cold%20fruity.jpg" class="tileimage"/>
                         <div class="tilename">Not Fruity</div>
                     </div>
@@ -252,11 +257,11 @@
                         <span class="q_title">Refresher or Coconut Milk</span>
                     </div>
 
-                    <div class="tile" onClick="hide('othercold'); goto('sugar'); register('coldrefresher');">
+                    <div class="tile" onClick="hide('othercold'); goto('sugar'); register('coldrefresher'); yesRefresher();">
                         <img src="images/cold%20refresher.jpg" class="tileimage"/>
                         <div class="tilename">Refresher</div>
                     </div>
-                    <div class="tile" onClick="hide('othercold'); goto('sugar'); register('coldcoconutmilk');">
+                    <div class="tile" onClick="hide('othercold'); goto('sugar'); register('coldcoconutmilk'); yesCoconut_Milk()">
                         <img src="images/cold%20coconut%20milk.jpg" class="tileimage"/>
                         <div class="tilename">Coconut Milk</div>
                     </div>
