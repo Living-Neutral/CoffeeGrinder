@@ -19,8 +19,11 @@ body {
 .results h1{
     text-align: center;
     font-size: 30px;
+    color:white;
+}
+
+.card h1{
     color:black;
-    
 }
 
 .quiz_name {

@@ -17,6 +17,7 @@
     <link href="css/quizstyle.css" rel="stylesheet">
 <!--    <script type="text/javascript" src="script.js"></script>-->
     <script type="text/javascript" src="action/quizscript.js"></script>
+    <script type="text/javascript" src="action/drink-script.js"></script>
     
     <script> 
     $(function(){
@@ -47,23 +48,23 @@
                     </div>
 
                     <label id="eggs" name="Eggs" class="q_item" oninput="this.className"> Egg
-                        <input type="checkbox">
+                        <input type="checkbox" onclick= >
                         <span class="checkmark"></span>
                     </label>
                     <label id="dairy" name="Dairy" class="q_item"> Dairy
-                        <input type="checkbox">
+                        <input type="checkbox" onclick="yesDairy();">
                         <span class="checkmark"></span>
                     </label>
                     <label id="soy" name="Soy" class="q_item"> Soy
-                        <input type="checkbox">
+                        <input type="checkbox" onclick = "yesSoy();">
                         <span class="checkmark"></span>
                     </label>
                     <label id="tree-nuts" name="Tree Nuts" class="q_item"> Tree Nuts
-                        <input type="checkbox">
+                        <input type="checkbox" onclick= "yesTreenuts();">
                         <span class="checkmark"></span>
                     </label>
                     <label id="wheat" name="Wheat" class="q_item"> Wheat
-                        <input type="checkbox">
+                        <input type="checkbox" onclick ="yesWheat();">
                         <span class="checkmark"></span>
                     </label>
                 </div>

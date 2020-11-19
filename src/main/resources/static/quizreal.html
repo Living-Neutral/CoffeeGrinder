@@ -35,9 +35,9 @@
 
 
             
-            
+            <a href="index.html">
             <div class="quiz_name">Coffee Grinder Quiz</div>
-
+            </a>
             <div class="container">
                     
                     
@@ -46,7 +46,7 @@
                         <span class="q_title">Hot or Cold?</span>
                     </div>
                     
-                    <div class="tile" onClick="hide('hotcold'); goto('hot'); register('hot'); updateHot(); ">
+                    <div class="tile" onClick="hide('hotcold'); goto('hot'); register('hot'); updateHot();">
                         <img src="images/hot%20Cropped.jpg" class="tileimage"/>
                         <div class="tilename">Hot</div>
                     </div>
@@ -173,14 +173,7 @@
                         <span class="q_title">Caramel, Mocha, Coffee, Chocolate, or Other?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldcaramelfrap');">
-                        <img src="images/cold%20caramel%20frap.jpg" class="tileimage"/>
-                        <div class="tilename">Caramel</div>
-                    </div>
-                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldmochafrap');">
-                        <img src="images/cold%20mocha%20frap.jpg" class="tileimage"/>
-                        <div class="tilename">Mocha</div>
-                    </div>
+                    
                     <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldcoffeefrap'); yesCoffee_Frappuccino();">
                         <img src="images/cold%20coffee%20frap.jpg" class="tileimage"/>
                         <div class="tilename">Coffee</div>
@@ -188,10 +181,6 @@
                     <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldchocolatefrap'); yesCreme_Frappuccino();">
                         <img src="images/cold%20chocolate%20frap.jpg" class="tileimage"/>
                         <div class="tilename">Creme</div>
-                    </div>
-                    <div class="tile" onClick="hide('frappuccino'); goto('sugar'); register('coldnochocolatefrap');">
-                        <img src="images/cold%20no%20chocolate%20frap.jpg" class="tileimage"/>
-                        <div class="tilename">Other</div>
                     </div>
                     
                     <button class="prev_button" onClick="goBack()">&lt; Back</button>
@@ -275,15 +264,18 @@
                         <span class="q_title">Sugar Level?</span>
                     </div>
 
-                    <div class="tile" onClick="hide('sugar'); goto('results'); register('sugar1');">
+                    <div class="tile" onClick="hide('sugar'); goto('results'); register('sugar1');
+                                               firstSweet();">
                         <img src="images/sugar1.jpg" class="tileimage"/>
                         <div class="tilename">Less</div>
                     </div>
-                    <div class="tile" onClick="hide('sugar'); goto('results'); register('sugar2');">
+                    <div class="tile" onClick="hide('sugar'); goto('results'); register('sugar2');
+                                               secondSweet();">
                         <img src="images/sugar2.jpg" class="tileimage"/>
                         <div class="tilename">Normal</div>
                     </div>
-                    <div class="tile" onClick="hide('sugar'); goto('results'); register('sugar3');">
+                    <div class="tile" onClick="hide('sugar'); goto('results'); register('sugar3');
+                                               thirdSweet();">
                         <img src="images/sugar3.jpg" class="tileimage"/>
                         <div class="tilename">More</div>
                     </div>
@@ -301,11 +293,15 @@
                     <div class="tile">
                         <img src="images/hot%20tea.jpg" class="tileimage"/>
 -->
-                        
-                        
+                         
                     </div>
                     
+                       
                 </div>
+                
+                
+               
+                
                 
             </div>
                 
