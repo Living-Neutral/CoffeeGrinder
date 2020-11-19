@@ -4,16 +4,17 @@ let espresso = false;
 let fruity = false;
 let coconut_milk = false;
 let category = 'None';
+let eggs = false;
 let wheat = false;
 let treenuts = false;
 let soy = false;
 let dairy = false;
+let sugar = 0;
 let firstSugar = 0.5;
 let secondSugar = 1.5;
 let thirdSugar = 2.5;
 
 
-console.log(temp);
 
 
 function updateHot()
@@ -125,7 +126,7 @@ function yesCoffee_Frappuccino()
 function yesSoy()
 {
 	console.log(soy);
-	soy = true;
+	soy = !soy;
 	console.log(soy);
 }
 
@@ -136,10 +137,15 @@ function noSoy()
 	console.log(soy);
 }
 
+function yesEggs()
+{
+    eggs = !eggs;
+}
+
 function yesDairy()
 {
 	console.log(dairy);
-	dairy = true;
+	dairy = !dairy;
 	console.log(dairy);
 }
 
@@ -153,7 +159,7 @@ function noDairy()
 function yesWheat()
 {
 	console.log(wheat);
-	wheat = true;
+	wheat = !wheat;
 	console.log(wheat);
 }
 
@@ -167,7 +173,7 @@ function noWheat()
 function yesTreenuts()
 {
 	console.log(treenuts);
-	treenuts = true;
+	treenuts = !treenuts;
 	console.log(treenuts);
 }
 
@@ -194,33 +200,67 @@ function yesSteamer()
 
 function firstSweet()
 {
-	
+	sugar = firstSugar;
+    getDrinks();
 }
 
-function drinkTemplate(drink){
-    return `
-    <div class="card">
-        <img class="drink-photo" src="${drink.image}">
-        <h1>${drink.name}</h1>
-`
+function secondSweet()
+{
+    sugar = secondSugar;
+    getDrinks();
 }
 
-fetch('drinks.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  let drinks = json;
+function thirdSweet()
+{
+    sugar = thirdSugar;
+    getDrinks();
+}
+
+
+let drinks = [];
+let new_order = [];
+
+
+function getDrinks()
+{
+    console.log('entering drinks');
+    
+    let fetch_variable =fetch('drinks.json').then(function(response) {
+    return response.json();
+    }).then(function(json) {
+    drinks = json;
   
-    final_order = [];
+    let final_order = []
     
     for(i = 0;i<drinks.length;i++)
     {
-        if(drinks[i].type=='Coffee')
-            final_order.push(drinks[i]);
+        new_order.push(drinks[i]);
+        
+        if(
+            (drinks[i].temp == temp
+             &&
+             drinks[i].type == type
+             &&
+             drinks[i].category == category
+            )
+            
+          )
+            {
+                final_order.push(drinks[i]);
+            }
+            
 
     }
     console.log(final_order.length);
-    
+    if(final_order.length<=0)
+    {
+       console.log("you made an impossible search");
+       document.getElementById("results").innerHTML = `
+        <h1>Impossible search</h1>
+        `
+    }
     document.getElementById("results").innerHTML = `
+    <h1>Returned ${final_order.length} drinks</h1>
     ${final_order.map(function(drink){
         return `
                     <div class = "card">
@@ -237,6 +277,9 @@ fetch('drinks.json').then(function(response) {
     
     `
     
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});
+    }).catch(function(err) {
+    console.log('Fetch problem: ' + err.message);
+    });
+}
+
+
